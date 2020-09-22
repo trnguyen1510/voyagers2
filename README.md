@@ -15,9 +15,9 @@ Planning an entire days-long trip can be quite hectic. Not only do travelers hav
 
 ![](https://media.giphy.com/media/4PUAjKEUjqBYlqyjwH/giphy.gif) **Online Travel Buddies Finder**
 
-Voyagers provides a platform that help people match their travel companions based on their customized travel profiles and preferences.
+Voyagers provides a platform that helps people match their travel companions based on their customized travel profiles and preferences.
 Voyagers provides holiday package tours to famous destinations and attractions, as well as popular local activities.
-Voyagers will offer to not only inexperienced travelers, but also to experienced travlers who are seeking travel companions to go abroad and share their experiences among their new group of friends.
+Voyagers will offer inexperienced and experienced travelers who are seeking travel companions to go abroad and share their experiences with their new group of friends.
 
 ## Targeted Demographics
 
