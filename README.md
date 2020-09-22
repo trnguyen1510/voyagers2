@@ -1,6 +1,7 @@
 ![Voyagers](https://i.imgur.com/bFX5bJs.png)
 
-![Voyagers](https://media.giphy.com/media/FxTcyJKmxWys88EWHD/giphy.gif) # Voyagers
+# Voyagers
+![Voyagers](https://media.giphy.com/media/FxTcyJKmxWys88EWHD/giphy.gif)
 
 > Never Travel lone!
 
@@ -67,7 +68,8 @@ _Stakeholders_: airline companies, local tour companies
 
 _ECT_: Week 4
 
-![Voyagers](https://media.giphy.com/media/ecxPmlUNAJFzGFXg6X/giphy.gif) ## Team
+## Team
+![Voyagers](https://media.giphy.com/media/ecxPmlUNAJFzGFXg6X/giphy.gif)
 
 - Tracy Nguyen
 
