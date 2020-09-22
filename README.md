@@ -6,7 +6,7 @@
 
 ## Concept
 
-![](https://media.giphy.com/media/YLsf4Kvdsa9GivKbEZ/giphy.gif)**Background Story**
+![](https://media.giphy.com/media/YLsf4Kvdsa9GivKbEZ/giphy.gif =48x48)**Background Story**
 
 Planning an entire days-long trip can be quite hectic. Not only do travers have to plan out the accommodations, attractions, and transportation, they may also have to recruit their own travel buddies themselves and there is a huge chance that their friends couldn't be able to travel with them. These tasks can be time-consuming and redundant. It can also be quite intimidating because of the lack of understanding, especially for inexperienced travelers. A good full-package travel planning service can be very helpful in this case. While many current travel service platforms focus on providing travel packages and deals to a group of travelers, few assess the social importance of tour groups amongst the travelers. Fewer give the options for the attendees to get to know their companion travelers beforehand if they meet through the tour package. At Voyagers, we work hard to provide full holiday packages with modern themed experiences, and matching service for like-minded travelers to group up for their next adventure.
 
