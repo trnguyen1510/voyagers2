@@ -21,11 +21,18 @@ Voyagers will offer inexperienced and experienced travelers who are seeking trav
 
 ## Targeted Demographics
 
-College students, newly grad, young professional, unexperienced or experienced travelers
+College students, newly graduates, young professionals, unexperienced or experienced travelers.
 
-## Main features
+## Main Features
 
-Package tours and matching travelers
+* Package Tours and add-on options
+
+* Matching Travelers
+
+* Sightseeing Recommendations
+
+* Best Local Food Recommendations 
+
 
 ## User Stories
 
@@ -35,8 +42,6 @@ I am a new grad and have few free times before my job starts. I want to be able 
 
 _Inital features involved_: tour suggestions, departure time
 
-_Stakeholders_: airline companies
-
 _Estimation of completion times (ECT)_: Week 1
 
 > 👨🏽‍💻 User #2
@@ -44,8 +49,6 @@ _Estimation of completion times (ECT)_: Week 1
 I am college student, and for the summer I’m considering to book a tour to travel in Japan. However, I’m nervous to travel to Japan for first time. I want to be able to match with a group or a travel buddy, so that I don’t have to wander in a new country alone.
 
 _Initial features involved_: tour suggestions, matching travel buddies who share same interest.
-
-_Stakeholders_: airline companies, other users.
 
 _Estimation of completion times (ECT)_: Week 2
 
@@ -55,8 +58,6 @@ I am a young professional who works in accounting field, I currently have two we
 
 _Initial features involved_: famous attractions suggestion for each destination, local activities booking, trip planner
 
-_Stakeholders_: airline companies, local tour companies, airBnB, hotels
-
 _ECT_: Week 3
 
 > 🧑🏻‍💼 User #4
@@ -65,9 +66,22 @@ I have never traveled to a different country, I want a platform I can use to sav
 
 _Inital features involved_: destination map, translator, schedule planner
 
-_Stakeholders_: airline companies, local tour companies, hotels, airBnB
-
 _ECT_: Week 4
+
+
+## Stakeholders
+
+* End users and Beneficiaries
+
+> Direct users
+> Beneficiaries: airline companies, local tour vendors, airBnB, local hostels, etc.
+
+* Project build team 
+
+> Developers
+> Project Managers
+> Legal Department (for advice about data protection regulations, identities scanning)
+> Sales and Customer Services team
 
 ## Team 
 
