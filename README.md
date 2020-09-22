@@ -74,13 +74,17 @@ _ECT_: Week 4
 * End users and Beneficiaries
 
 > Direct users
+
 > Beneficiaries: airline companies, local tour vendors, airBnB, local hostels, etc.
 
 * Project build team 
 
 > Developers
+
 > Project Managers
+
 > Legal Department (for advice about data protection regulations, identities scanning)
+
 > Sales and Customer Services team
 
 ## Team 
