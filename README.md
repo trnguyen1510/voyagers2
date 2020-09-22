@@ -1,9 +1,9 @@
 ![Voyagers](https://i.imgur.com/bFX5bJs.png)
 
 # Voyagers
-![Voyagers](https://media.giphy.com/media/FxTcyJKmxWys88EWHD/giphy.gif)
-> Never Travel lone!
 
+> Never Travel lone!
+![Voyagers](https://media.giphy.com/media/FxTcyJKmxWys88EWHD/giphy.gif)
 
 
 ## Concept
