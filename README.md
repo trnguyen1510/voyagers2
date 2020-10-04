@@ -100,3 +100,83 @@ _ECT_: Week 4
 - Jerry Jiang
 
 - Karthik Purna
+
+# Milestone 1
+
+## Iteration 1 
+> 15 calendar days, 11 working days (75% velocity)
+> Days of actual work: 5 * 15 * 0.75 = 56 days
+
+### Work breakdown
+
+:black_square_button: Welcome Page - Kennenth and Tracy 
+
+> Priority : 10
+
+> EST. 4-5 days
+
+:black_square_button: About Us - Kennenth and Tracy 
+
+> Priority: 20
+
+> EST. 4-5 days
+
+
+:black_square_button: Sign In (connect and perform authentication) - Tayo/Jerry/Karthik 
+
+> Priority: 10
+
+> EST. 8 days 
+
+:black_square_button: Sign Up (connect and store in database) - Tayo/Jerry/Karthik
+
+> Priority: 10
+
+> EST. 7-8 days
+
+## Iteration 2
+> 12 calendar days, 9 working days (75% Velocity)
+
+> Days of actual work: 5 * 12 * 0.75 = 45 days 
+
+### Work breakdown 
+
+:black_square_button: User Profile Editing Page - Kennenth and Jerry
+> Priority: 20
+
+> EST. 10 days
+
+
+
+:black_square_button: Tour and Preferences builder - Karthik and Tracy
+> Questionaires with multiple choices and fill-in answers, connect to the database
+
+> Priority: 20
+
+> EST. 10 days 
+
+:black_square_button: Tour packages display page - Tayo/Karthik/Tracy 
+> Priority: 20
+
+> EST. 13 days 
+
+:black_square_button: View other profiles - Kennenth/Jerry/Tayo 
+> Priority: 30
+
+> EST. 12 days 
+
+### Velocity 
+
+* Total Day: 27 calendar days (until 11/03/2020 Milestone 1 is due)
+
+* Working Day: 20 days 
+
+* Velocity. = ~75% (subject to change. Range from 65% - 75%) 
+
+
+**Group's Trello link:** https://trello.com/b/gdYNZyem
+
+
+
+
+
