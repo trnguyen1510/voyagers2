@@ -174,7 +174,7 @@ _ECT_: Week 4
 * Velocity. = ~75% (subject to change. Range from 65% - 75%) 
 
 
-**Group's Trello link:** https://trello.com/b/gdYNZyem
+**Team's Trello link:** https://trello.com/b/gdYNZyem
 
 
 
