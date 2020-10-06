@@ -107,6 +107,9 @@ _ECT_: Week 4
 > 15 calendar days, 11 working days (75% velocity)
 > Days of actual work: 5 * 15 * 0.75 = 56 days
 
+
+![BurnoutIteration1](https://i.imgur.com/X7r4BGD.png)
+
 ### Work breakdown
 
 :black_square_button: Welcome Page - Kennenth and Tracy 
@@ -138,6 +141,9 @@ _ECT_: Week 4
 > 12 calendar days, 9 working days (75% Velocity)
 
 > Days of actual work: 5 * 12 * 0.75 = 45 days 
+
+
+![Iteration2Burnout](https://i.imgur.com/y9EJmdd.png)
 
 ### Work breakdown 
 
