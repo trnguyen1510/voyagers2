@@ -182,7 +182,13 @@ _ECT_: Week 4
 
 **Team's Trello link:** https://trello.com/b/gdYNZyem
 
+### Pytest Description
+ 
+All the current/future tests will be included in the **tests** directory under voyagers
 
+Part B test (pageload.py):
+- Test the validity of homepage URL
 
-
-
+**Instruction**
+- install "Validators" - pip install validators
+- run pytest pageload.py
