@@ -31,4 +31,5 @@ urlpatterns += [
 urlpatterns += [
     path('', RedirectView.as_view(url='home/', permanent=True)),
 ]
+
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
