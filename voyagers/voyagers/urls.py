@@ -23,13 +23,14 @@ from django.conf.urls.static import static
 
 urlpatterns = [
         path('admin/', admin.site.urls),
+        path('about/', include('home.urls')),
+        path('home/', include('home.urls')),
+        path('login/', include('home.urls'))
 ]
 
-urlpatterns += [
-    path('home/', include('home.urls')),
-]
-urlpatterns += [
-    path('', RedirectView.as_view(url='home/', permanent=True)),
-]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += [path('', RedirectView.as_view(url='home/', permanent=True)),]
+urlpatterns +=  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+
