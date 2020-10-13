@@ -14,9 +14,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 
-    <title>Log In</title>
-
-    <link rel="stylesheet" href="../../static/web/assets/mobirise-icons2/mobirise2.css">
+    <title>Sign Up</title>
     <link rel="stylesheet" href="../../static/tether/tether.min.css">
     <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap-grid.min.css">
@@ -33,7 +31,7 @@
     <!-- Font Icon -->
     <link rel="stylesheet" href="../../static/fonts/material-icon/css/material-design-iconic-font.min.css">
     <style>
-        .sign-in,
+        .signup,
         .main {
             background: #d2d1f3;
             /* fallback for old browsers */
@@ -46,11 +44,7 @@
         }
 
         .main {
-            padding: 70px 0 10px 0;
-        }
-
-        .sign-in {
-            margin-bottom: 20px;
+            padding: 55px 0 10px 0;
         }
     </style>
 
@@ -79,10 +73,10 @@
                         <span></span>
                     </div>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
-                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{% url 'index' %}">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'index' %}">
                                 Home</a></li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
                                 href="{% url 'about' %}">
@@ -94,8 +88,9 @@
                         </li>
                     </ul>
 
-                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4" href="{% url 'signup' %}">
-                            Sign Up Now!</a></div>
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'signup' %}">
+                            Sign In Now!</a></div>
                 </div>
             </div>
         </nav>
@@ -103,48 +98,48 @@
     <!-- Menu ends  -->
 
     <!-- Body starts here -->
-    <!-- Sing in Form -->
+    <!-- Sign up form -->
     <div class="main">
-        <section class="sign-in">
+        <section class="signup">
             <div class="container">
-                <div class="signin-content">
-                    <div class="signin-image">
-                        <figure><img src="../../static/images/hotairbaloon.jpeg" alt="sing in image"></figure>
-                        <a href="{% url 'signup' %}/" class="signup-image-link">Create an account</a>
-                    </div>
-
-                    <div class="signin-form">
-                        <h2 class="form-title">Log In</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign Up</h2>
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" />
+                            </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Your Email" />
                             </div>
                             <div class="form-group">
-                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password" />
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
-                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember
-                                    me</label>
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
+                                    statements in <a href="#" class="term-service">Terms of service</a></label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
                             </div>
                         </form>
-                        <div class="social-login">
-                            <span class="social-label">Or login with</span>
-                            <ul class="socials">
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-                            </ul>
-                        </div>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="../../static/images/mbr-696x1044.jpeg" alt="sing up image"></figure>
+                        <a href="{% url 'login' %}" class="signup-image-link">I am already member</a>
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
     </div>
 
@@ -227,6 +222,8 @@
     <script src="../../static/theme/js/script.js"></script>
 
     <!-- JS -->
+    <script src="../../static/signupjs/signup.js"></script>
+    <script src="../../static/vendor/vendor/jquery/jquery.min.js"></script>
 
     <!-- Main JS-->
 
