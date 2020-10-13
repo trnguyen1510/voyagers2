@@ -52,19 +52,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
-                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="about/">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}">
                                 About us</a></li>
                         <li class="nav-item"><a class="nav-link link text-black display-4" href="service.html#top">
                                 Services</a></li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                                href="about-us.html#contacts2-16">Contacts</a>
+                                href="{% url 'about' %}">Contacts</a>
                         </li>
                     </ul>
 
-                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4" href="signup.html">
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'signup' %}">
                             Sign Up Now!</a></div>
 
-                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4" href="login/">
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'login' %}">
                             Log In Now!</a></div>
                 </div>
             </div>
@@ -163,10 +166,6 @@
 
     <section class="testimonails3 carousel slide testimonials-slider cid-sczb4dIkqy" data-interval="false"
         id="testimonials3-n">
-
-
-
-
 
         <div class="text-center container">
             <h3 class="mb-4 mbr-fonts-style display-2">
@@ -290,13 +289,13 @@
 
 
                         <li class="foot-menu-item mbr-fonts-style display-7">
-                            <a class="text-white text-primary" href="about-us.html" target="_blank">About us</a>
+                            <a class="text-white text-primary" href="{% url 'about' %}" target="_blank">About us</a>
                         </li>
                         <li class="foot-menu-item mbr-fonts-style display-7">
                             <a class="text-white" href="#" target="_blank">Services</a>
                         </li>
                         <li class="foot-menu-item mbr-fonts-style display-7">
-                            <a class="text-white" href="about-us.html#contacts2-16" target="_blank">Contact Us</a>
+                            <a class="text-white" href="{% url 'about' %}" target="_blank">Contact Us</a>
                         </li>
                         <li class="foot-menu-item mbr-fonts-style display-7">
                             <a class="text-white" href="#" target="_blank">Careers</a>
@@ -336,7 +335,7 @@
         </div>
     </section>
 
-    <script src="../static/web/../static/jquery/jquery.min.js"></script>
+    <script src="../static/web/assets/jquery/jquery.min.js"></script>
     <script src="../static/popper/popper.min.js"></script>
     <script src="../static/tether/tether.min.js"></script>
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
