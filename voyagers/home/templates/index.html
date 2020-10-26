@@ -2,9 +2,10 @@
 <html>
 
 <head>
-    <!-- -->
+    <!-- Site made with Mobirise Website Builder v5.1.4, https://mobirise.com -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.1.4, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="../static/images/untitled-design-128x128-1.png" type="image/x-icon">
     <meta name="description" content="">
@@ -60,6 +61,11 @@
                                 href="{% url 'about' %}">Contacts</a>
                         </li>
                     </ul>
+                    {%if user.is_authenticated %}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                        href="{% url 'logout' %}">
+                        Logout</a></div>
+                        {%else%}
 
                     <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
                             href="{% url 'signup' %}">
@@ -68,6 +74,7 @@
                     <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
                             href="{% url 'login' %}">
                             Log In Now!</a></div>
+                    {%endif%}
                 </div>
             </div>
         </nav>

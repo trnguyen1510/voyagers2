@@ -1,16 +1,54 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth.models import User,auth
+from .forms import UserRegisterForm
+from django.contrib import messages
+
 
 # Create your views here.
 def index(request):
-# Render the HTML template index.html
+    # Render the HTML template index.html
     return render(request, 'index.html')
 
+
 def about(request):
-    return render(request,'about-us.html')
+    return render(request, 'about-us.html')
+
 
 def login(request):
-    return render(request,'login.html')    
+    if request.method == 'POST':
+        username = request.POST['username']
+        pass1 = request.POST['your_pass']
+        user = auth.authenticate(username=username, password=pass1)
+        if user:
+            auth.login(request, user)
+            return redirect("index")
+        else:
+            messages.info(request, "Invalid Credentials")
+            return redirect('login')
+    else:
+        return render(request, 'login.html')
+
+    return render(request, 'login.html')
+
 
 def signup(request):
-    return render(request,'signup.html')        
+    if request.method == 'POST':
+
+        username = request.POST['name']
+        email = request.POST['email']
+        pass1 = request.POST['pass']
+        pass2 = request.POST['re_pass']
+        if User.objects.filter(username=username).exists():
+            messages.info(request, 'UserName already Taken')
+        elif User.objects.filter(email=email).exists():
+            messages.info(request, 'Email already Taken')
+
+        elif pass1 != pass2:
+            messages.info(request, 'confirm password is mismatched')
+
+        else:
+            user = User.objects.create_user(username=username, password=pass1, email=email)
+            user.save()
+            return redirect('login')
+    return render(request, "signup.html")

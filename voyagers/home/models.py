@@ -10,3 +10,8 @@ class User_Profile(models.Model):
 
     def __str__(self):
         return self.first_name
+
+
+# class customer(models.Model):
+#     username=models.CharField(max_length=10)
+#     email = mdoels.e

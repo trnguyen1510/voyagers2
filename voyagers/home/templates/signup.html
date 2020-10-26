@@ -2,9 +2,10 @@
 <html>
 
 <head>
-    <!--  -->
+    <!-- Site made with Mobirise Website Builder v5.1.4, https://mobirise.com -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.1.4, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="../../static/images/untitled-design-128x128-1.png" type="image/x-icon">
     <meta name="description" content="">
@@ -88,7 +89,7 @@
                     </ul>
 
                     <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
-                            href="{% url 'signup' %}">
+                            href="{% url 'login' %}">
                             Sign In Now!</a></div>
                 </div>
             </div>
@@ -104,7 +105,13 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign Up</h2>
+                        {% if messages %}
+                             {% for message in messages %}
+                            <div class="alert alert-{{message.tags}}">{{message}}</div>
+                            {% endfor %}
+                         {% endif %}
                         <form method="POST" class="register-form" id="register-form">
+                            {% csrf_token %}
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name" />
