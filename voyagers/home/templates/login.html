@@ -2,9 +2,10 @@
 <html>
 
 <head>
-    <!-- -->
+    <!-- Site made with Mobirise Website Builder v5.1.4, https://mobirise.com -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.1.4, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="../../static/images/untitled-design-128x128-1.png" type="image/x-icon">
     <meta name="description" content="">
@@ -81,8 +82,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
-                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                                href="{% url 'index' %}">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{% url 'index' %}">
                                 Home</a></li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
                                 href="{% url 'about' %}">
@@ -94,8 +94,7 @@
                         </li>
                     </ul>
 
-                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
-                            href="{% url 'signup' %}">
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4" href="{% url 'signup' %}">
                             Sign Up Now!</a></div>
                 </div>
             </div>
@@ -111,15 +110,16 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="../../static/images/hotairbaloon.jpeg" alt="sing in image"></figure>
-                        <a href="{% url 'signup' %}/" class="signup-image-link">Create an account</a>
+                        <a href="{% url 'signup' %}" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Log In</h2>
                         <form method="POST" class="register-form" id="login-form">
+                            {% csrf_token %}
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Your Email" />
+                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="username" id="name" placeholder="USERNAME" />
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
