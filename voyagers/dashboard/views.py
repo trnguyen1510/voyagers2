@@ -7,3 +7,5 @@ from django.http import HttpResponse
 def dashboard(request):
     # Render the HTML template index.html
     return render(request, 'dashboard.html')
+def editing(request):
+    return render(request, 'editing.html')
