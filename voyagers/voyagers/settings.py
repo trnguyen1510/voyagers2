@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
-    'dashboard'
-    'tourpackages'
+    'dashboard.apps.DashboardConfig',
+    'tourpackages.apps.TourpackagesConfig'
 ]
 
 MIDDLEWARE = [
