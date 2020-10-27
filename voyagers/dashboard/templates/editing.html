@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{#  top navbar  #}
+<section class="menu menu1 cid-scz8qJgP3B" once="menu" id="menu1-k">
+
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+
+
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                            href="{% url 'index' %}">
+                            Home Page</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                            href="{% url 'about' %}">
+                            About us</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="service.html#top">
+                            Services</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                            href="{% url 'about' %}">Contacts</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                        href="{% url 'signup' %}">
+                        Book Tour!</a></div>
+
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                        href="{% url 'login' %}">
+                        Log Out</a></div>
+            </div>
+        </div>
+    </nav>
+</section>
+{#  top navbar  #}
+
+
+
+<!-- ======= Mobile nav toggle button ======= -->
+<button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="d-flex flex-column">
+
+        <div class="profile">
+            <img src="../static/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+            <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+            <div class="social-links mt-3 text-center">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+                <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+                <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
+                <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+                <li><a href="#setting"><i class="bx bx-edit-alt"></i> Setting</a></li>
+
+            </ul>
+        </nav><!-- .nav-menu -->
+        <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+        <h1>Profile Editing</h1>
+        <p>Editing your <span class="typed" data-typed-items="Name, Job Title, Personal Info"></span></p>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+    <!--Personal Information-->
+    <div class="container">
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <div class="section-title">
+                <h2>Personal Information</h2>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="firstName">Legal First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Legal First Name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="lastName">Legal Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Legal Last Name">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="lastName">Initial Middle Name</label>
+                    <input type="text" class="form-control" id="midName" placeholder="MiddleName">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4" disabled>Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Date Of Birth</label>
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type="date" class="form-control" id="birthday" name="birthday">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="twitter">Twitter</label>
+
+                <input class="form-control" type="url" value="https://twitter.com/" id="twitter">
+
+            </div>
+            <div class="form-group">
+                <label for="facebook">Facebook</label>
+
+                <input class="form-control" type="url" value="https://facebook.com/" id="facebook">
+
+            </div>
+            <div class="form-group">
+                <label for="instagram">Instagram</label>
+
+                <input class="form-control" type="url" value="https://instagram.com/" id="instagram">
+
+            </div>
+            <div class="form-group">
+                <label for="inputPhone">Telephone</label>
+
+                <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="number" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <!--Selecting profile pic-->
+            <div class="form-group">
+                <h3>Select Your Profile Picture</h3>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Select Profile Picture</label>
+                </div>
+            </div>
+            <!--Selecting profile pic ends-->
+
+            <button type="submit" class="btn btn-danger">Save</button>
+        </div>
+
+        <!--Personal Information Ends Here-->
+
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <form>
+                    <div class="section-title">
+
+                        <div class="form-group">
+                            <label for="user-about">
+                                <h2>About</h2>
+                            </label>
+                            <textarea name="text" class="form-control" id="user-about"
+                                placeholder="Write Something About Yourself!" autocomplete="off"></textarea>
+                        </div>
+                        <button type="save" class="btn btn-danger">Save</button>
+                    </div>
+            </div>
+    </div>
+    </form>
+    </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Personality Section ======= -->
+    <section id="skills" class="skills section-bg">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Skills</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                    fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+
+            <div class="row skills-content">
+
+                <div class="col-lg-6" data-aos="fade-up">
+
+                    <div class="progress">
+                        <span class="skill">HTML <i class="val">100%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">CSS <i class="val">90%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">JavaScript <i class="val">75%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="progress">
+                        <span class="skill">PHP <i class="val">80%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">Photoshop <i class="val">55%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Skills Section -->
+
+</main><!-- End #main -->
+</div>
+</div>
+
+{% endblock %}
