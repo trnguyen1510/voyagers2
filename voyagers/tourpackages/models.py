@@ -14,8 +14,8 @@ class Customer(models.Model):
 
 
 class Attraction(models.Model):
-    city = models.CharField(max_length=30, default='Stony Brook')
-    attractionName = models.CharField(max_length=50)
+    city = models.CharField(max_length=30, default='')
+    attractionName = models.CharField(max_length=100)
     attractionDescription = models.TextField()
     price = models.FloatField()
     image = models.ImageField(null=True, blank=True)
