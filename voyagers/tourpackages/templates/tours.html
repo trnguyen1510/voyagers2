@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tours</title>
-</head>
-<body>
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+        {% for attraction in attraction %}
+		<div class="col-lg-4">
+            <img class="thumbnail" src="{{attraction.imageURL}}">
+			<div class="box-element product">
+                <h6><strong>{{ attraction.attractionName }}</strong></h6>
 
-</body>
-</html>
+                <a href="{{ attraction.attractionDescription }}">
+                <button type="button" class="btn btn-outline-secondary">Details</button></a>
+				<h4 style="display: inline-block; float: right"><strong>{{attraction.price}}</strong></h4>
+
+			</div>
+		</div>
+        {% endfor %}
+	</div>
+
+{% endblock content %}
