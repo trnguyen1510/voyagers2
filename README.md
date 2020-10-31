@@ -133,13 +133,13 @@ https://trnguyen1510.github.io/front/
 :white_check_mark: Sign Up Page (Frond End) - Kenneth and Tracy 
 
 
-:black_square_button: Sign In (connect and perform authentication) - Tayo/Jerry/Karthik 
+:white_check_mark:  Sign In (connect and perform authentication) - Tayo/Jerry/Karthik 
 
 > Priority: 10
 
 > EST. 8 days 
 
-:black_square_button: Sign Up (connect and store in database) - Tayo/Jerry/Karthik
+:white_check_mark:  Sign Up (connect and store in database) - Tayo/Jerry/Karthik
 
 > Priority: 10
 
@@ -155,21 +155,21 @@ https://trnguyen1510.github.io/front/
 
 ### Work breakdown 
 
-:black_square_button: User Profile Editing Page - Kennenth and Jerry
+:white_check_mark:  User Profile Editing Page - Tracy/Tayo
 > Priority: 20
 
 > EST. 10 days
 
 
 
-:black_square_button: Tour and Preferences builder - Karthik and Tracy
+:white_check_mark:  Tour and Preferences builder - Jerry/Tracy
 > Questionaires with multiple choices and fill-in answers, connect to the database
 
 > Priority: 20
 
 > EST. 10 days 
 
-:black_square_button: Tour packages display page - Tayo/Karthik/Tracy 
+:white_check_mark:  Tour packages display page - Jerry/Tracy 
 > Priority: 20
 
 > EST. 13 days 
