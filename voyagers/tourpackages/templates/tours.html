@@ -1,20 +1,60 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
-    <div class="row">
-        {% for attraction in attraction %}
-		<div class="col-lg-4">
-            <img class="thumbnail" src="{{attraction.imageURL}}">
-			<div class="box-element product">
-                <h6><strong>{{ attraction.attractionName }}</strong></h6>
+<section class="gallery2 cid-sdlN4g4LYE" id="gallery2-1f">
+    <div class="container">
+        <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">Available Tours</h4>
+            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Our upcoming tours&nbsp;
+            </h5>
+        </div>
+        <div class="row search-bar">
+            <div class="col-4">
 
-                <a href="{{ attraction.attractionDescription }}">
-                <button type="button" class="btn btn-outline-secondary">Details</button></a>
-				<h4 style="display: inline-block; float: right"><strong>{{attraction.price}}</strong></h4>
+            </div>
+            <div class="col-4">
 
-			</div>
-		</div>
-        {% endfor %}
-	</div>
+            </div>
+            <div class="col-4" style="margin: 10px auto; ">
+                <form class="form-inline my-2 my-lg-0" method="get">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                    <button class="navbar-buttons mbr-section-btn btn btn-success display-4"
+                        type="submit">Search</button>
+
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            {% for attraction in attraction %}
+            <div class="item features-image сol-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <img class="thumbnail" src="{{attraction.imageURL}}">
+                    </div>
+                    <div class="item-content">
+                        <h5 class="item-title mbr-fonts-style display-5" style="font-size:20px;">
+                            {{ attraction.attractionName }}</h5>
+                        <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><em><a
+                                    href="{{ attraction.attractionDescription }}"></a></em></h6>
+                        <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                            $ {{attraction.price}}
+                        </p>
+                    </div>
+                    <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7"
+                            target="_blank">Detail</a></div>
+
+
+
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+</section>
+
 
 {% endblock content %}

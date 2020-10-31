@@ -274,7 +274,7 @@ a:hover {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 50px 0 10px;
+  padding: 0;
   overflow: hidden;
 }
 
