@@ -38,29 +38,20 @@ College students, newly graduates, young professionals, unexperienced or experie
 
 > 👩🏼‍🏫 User #1
 
-I am a new grad and have few free times before my job starts. I want to be able to search and book a tour, so that I can travel during my free time.
-
-_Inital features involved_: tour suggestions, departure time
+I am a new grad and have few free times before my job starts. I want to take a look on travel tours website, so that I can do research for tour packages during my free time.
 
 _Estimation of completion times (ECT)_: Week 1
 
-> 👨🏽‍💻 User #2
 
-I am college student, and for the summer I’m considering to book a tour to travel in Japan. However, I’m nervous to travel to Japan for first time. I want to be able to match with a group or a travel buddy, so that I don’t have to wander in a new country alone.
-
-_Initial features involved_: tour suggestions, matching travel buddies who share same interest.
-
-_Estimation of completion times (ECT)_: Week 2
-
-> 👩🏾‍💼 User #3
+> 👩🏾‍💼 User #2
 
 I am a young professional who works in accounting field, I currently have two weeks of vacation and want to take a few days off to travel to another country. I want to be able to search for famous attractions and local activities, so that I don’t have to spend too much time on google to research for them.
 
-_Initial features involved_: famous attractions suggestion for each destination, local activities booking, trip planner
+_Initial features involved_: homepage, user sign up, famous attractions suggestion for each destination
 
 _ECT_: Week 3
 
-> 🧑🏻‍💼 User #4
+> 🧑🏻‍💼 User #3
 
 I have never traveled to a different country, I want a platform I can use to save my trip planner and information, so that I can plan my trip ahead of time and retrieve my information with my phone.
 
@@ -87,6 +78,7 @@ _ECT_: Week 4
 
 > Sales and Customer Services team
 
+
 ## Team 
 
 ![Voyagers](https://media.giphy.com/media/ecxPmlUNAJFzGFXg6X/giphy.gif)
@@ -100,6 +92,11 @@ _ECT_: Week 4
 - Jerry Jiang
 
 - Karthik Purna
+
+# Application Installing Instruction
+- install "Validators" - pip install validators
+- run pytest pageload.py
+
 
 # Milestone 1
 
@@ -133,13 +130,13 @@ https://trnguyen1510.github.io/front/
 :white_check_mark: Sign Up Page (Frond End) - Kenneth and Tracy 
 
 
-:black_square_button: Sign In (connect and perform authentication) - Tayo/Jerry/Karthik 
+:white_check_mark:  Sign In (connect and perform authentication) - Tayo/Jerry/Karthik 
 
 > Priority: 10
 
 > EST. 8 days 
 
-:black_square_button: Sign Up (connect and store in database) - Tayo/Jerry/Karthik
+:white_check_mark:  Sign Up (connect and store in database) - Tayo/Jerry/Karthik
 
 > Priority: 10
 
@@ -155,21 +152,21 @@ https://trnguyen1510.github.io/front/
 
 ### Work breakdown 
 
-:black_square_button: User Profile Editing Page - Kennenth and Jerry
+:white_check_mark:  User Profile Editing Page - Tracy/Tayo
 > Priority: 20
 
 > EST. 10 days
 
 
 
-:black_square_button: Tour and Preferences builder - Karthik and Tracy
+:white_check_mark:  Tour and Preferences builder - Jerry/Tracy
 > Questionaires with multiple choices and fill-in answers, connect to the database
 
 > Priority: 20
 
 > EST. 10 days 
 
-:black_square_button: Tour packages display page - Tayo/Karthik/Tracy 
+:white_check_mark:  Tour packages display page and functional searchbar - Jerry/Tracy 
 > Priority: 20
 
 > EST. 13 days 
@@ -197,6 +194,3 @@ All the current/future tests will be included in the **tests** directory under v
 Part B test (pageload.py):
 - Test the validity of homepage URL
 
-**Instruction**
-- install "Validators" - pip install validators
-- run pytest pageload.py
