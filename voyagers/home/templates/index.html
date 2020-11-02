@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../static/theme/css/style.css">
     <link rel="preload" as="style" href="../static/mobirise/css/mbr-additional.css">
     <link rel="stylesheet" href="../static/mobirise/css/mbr-additional.css" type="text/css">
- </head>
+</head>
 
 <body>
     <!--Navbar starts here-->
@@ -58,6 +58,9 @@
                         </li>
                     </ul>
                     {%if user.is_authenticated %}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4"
+                            href="{% url 'tours' %}">
+                            Upcoming Tours</a></div>
                     <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
                             href="{% url 'dashboard' %}">
                             Profile</a></div>
