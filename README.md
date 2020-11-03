@@ -38,36 +38,35 @@ College students, newly graduates, young professionals, unexperienced or experie
 
 > 👩🏼‍🏫 User #1
 
-I am a new grad and have few free times before my job starts. I want to be able to search and book a tour, so that I can travel during my free time.
+I am a new graduate and have a short amount of time off before my new job starts. I want to be able to search available upcoming tours, so that I can travel during my free time.
 
-_Inital features involved_: tour suggestions, departure time
+_Initial features involved_: tour suggestions, available tours, dates of tours 
 
 _Estimation of completion times (ECT)_: Week 1
 
 > 👨🏽‍💻 User #2
 
-I am college student, and for the summer I’m considering to book a tour to travel in Japan. However, I’m nervous to travel to Japan for first time. I want to be able to match with a group or a travel buddy, so that I don’t have to wander in a new country alone.
+I am college student, and for the summer I’m considering to book a tour to travel in Japan. However, I’m nervous because I have never traveled before. I want to find an application that will make my life easier by giving me tour suggestions for my upcoming trip and create an account with them.
 
-_Initial features involved_: tour suggestions, matching travel buddies who share same interest.
+_Initial features involved_: account creation, tour suggestions 
 
 _Estimation of completion times (ECT)_: Week 2
 
 > 👩🏾‍💼 User #3
 
-I am a young professional who works in accounting field, I currently have two weeks of vacation and want to take a few days off to travel to another country. I want to be able to search for famous attractions and local activities, so that I don’t have to spend too much time on google to research for them.
+I am a young professional who works in accounting field, I currently have two weeks of vacation and want to take a few days off to travel. I want to be able to search for attractions by destination name or key words and view how much the price will be, so that I don’t have to spend too much time on google researching for them.
 
-_Initial features involved_: famous attractions suggestion for each destination, local activities booking, trip planner
+_Initial features involved_: attractions displayed by destination name or keywords, prices of tours displayed
 
 _ECT_: Week 3
 
 > 🧑🏻‍💼 User #4
 
-I have never traveled to a different country, I want a platform I can use to save my trip planner and information, so that I can plan my trip ahead of time and retrieve my information with my phone.
+I have never traveled with someone unknown before. I want to utilize a platform that would allow me to customize my profile, so that individuals could get to know me better before embarking on out trip.
 
-_Inital features involved_: destination map, translator, schedule planner
+_Initial features involved_: profile customization, user information available 
 
 _ECT_: Week 4
-
 
 ## Stakeholders
 
