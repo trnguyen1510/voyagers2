@@ -780,15 +780,16 @@ body {
 }
 
 .alert {
-  color: #ffffff;
-  border-radius: 0;
-  border: 0;
+color: #b83b5e;
+  border-radius: 25px;
+  border: 2px solid #b83b5e;
   font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 1.875rem;
   padding: 1.25rem;
   position: relative;
   text-align: center;
+  background-color: rgb(238, 215, 215);
 }
 
 .alert.alert-form::after {
