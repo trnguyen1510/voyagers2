@@ -34,6 +34,7 @@ def login(request):
 
 def signup(request):
     if request.method == 'POST':
+        min_length = 8
 
         username = request.POST['username']
         first_name = request.POST['first_name']
@@ -41,13 +42,19 @@ def signup(request):
         email = request.POST['email']
         pass1 = request.POST['pass']
         pass2 = request.POST['re_pass']
-        if User.objects.filter(username=username).exists():
-            messages.info(request, 'UserName already Taken')
-        elif User.objects.filter(email=email).exists():
-            messages.info(request, 'Email already Taken')
+        first_isalpha = pass1[0].isalpha()
 
+        if User.objects.filter(username=username).exists():
+            messages.info(request, 'UserName is already Taken')
+        elif User.objects.filter(email=email).exists():
+            messages.info(request, 'Email is already Taken')
+        elif len(pass1) < min_length:
+            messages.info(request, 'The new password must be at least %d characters long.' % min_length)
+        elif all(c.isalpha() == first_isalpha for c in pass1):
+            messages.info(request, 'The new password must contain at least one letter and at least one digit or '
+                                   'punctuation character')
         elif pass1 != pass2:
-            messages.info(request, 'confirm password is mismatched')
+            messages.info(request, 'Password and confirm password do not match')
 
         else:
             user = User.objects.create_user(username=username, password=pass1, email=email, first_name=first_name, last_name=last_name)
