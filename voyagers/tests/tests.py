@@ -23,12 +23,12 @@ def test_user_create():
 
 #User_profile(home) testing
 @pytest.mark.django_db
-def test_User_Profile_create():
+def test_user_Profile_create():
     contact = User_Profile.objects.create(first_name='John', last_name='Doe', Address='111', Country='USA')
     assert contact.first_name == 'John'
 
 @pytest.mark.django_db
-def test_Attraction_create():
+def test_attraction_create():
     tour = Attraction.objects.create(city='la', attractionName='boat', attractionDescription='boatisfun', price='11')
     assert tour.city == 'la'
 
