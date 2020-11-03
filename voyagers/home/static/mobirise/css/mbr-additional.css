@@ -548,7 +548,7 @@ a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]) {
   background-color: #70c770;
 }
 .alert-info {
-  background-color: #47b5ed;
+  background-color: rgb(238, 215, 215);
 }
 .alert-warning {
   background-color: #ffe161;
