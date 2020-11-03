@@ -1,10 +1,9 @@
 
+
 ![Voyagers](https://i.imgur.com/bFX5bJs.png)
 
 # Voyagers
 ### Never Travel alone!
-
-
 ![Voyagers](https://media.giphy.com/media/FxTcyJKmxWys88EWHD/giphy.gif)
 
 Voyagers provides a platform that helps people match their travel companions based on their customized travel profiles and preferences.
@@ -13,22 +12,16 @@ Voyagers provides holiday package tours to famous destinations and attractions, 
 
 Voyagers will offer inexperienced and experienced travelers who are seeking travel companions to go abroad and share their experiences with their new group of friends.
 
-
-
 ![](https://media.giphy.com/media/IaATK5t6s5vvWT4Bc6/giphy.gif) **Background Story**
 
 Planning an entire days-long trip can be quite hectic. Not only do travelers have to plan out the accommodations, attractions, and transportation, they may also have to recruit their own travel buddies themselves and there is a huge chance that their friends won’t be able to travel with them. These tasks can be time-consuming and redundant. It can also be quite intimidating because of the lack of understanding, especially for inexperienced travelers. A good full-package travel planning service can be very helpful in this case. While many current travel service platforms focus on providing travel packages and deals to a group of travelers, few assess the social importance of tour groups amongst the travelers. Fewer give the options for the attendees to get to know their companion travelers beforehand if they meet through the tour package. At Voyagers, we work hard to provide full holiday packages with modern themed experiences, and matching service for like-minded travelers to group up for their next adventure.
-
-
-
-
 ## Application Requirements
-
  1. Python 3.8.5 or newer
  2. Django 3.1.2
  3. Pip
  4. Virtual Environment
- 5. Other packages listed in requiremtns.txt
+ 5. pytest
+ 6. Other packages listed in requiremtns.txt
 ## How to install and run Voyagers App
 Make sure you have already downloaded and install python3 and pip
 #### Initial setup and run the website
@@ -121,9 +114,7 @@ To run pytest `cd` into the directory where `manage.py` is and run:
 - `Upcoming Tours` displays all of our available and incoming tours if users haven't answered our `Tour Preferences` questions (Milestone 2) or if users only want to check out what do we offer for the next six months. 
 - In `Upcoming Tours`, we offer a search bar that help users to filter out the city they would like to see. The `All` button would help to redisplay all availabled tour packages. 
 
-
-
-## Aplication Concept
+## Application Concept
 
 ### Targeted Demographics
 
@@ -141,138 +132,104 @@ College students, newly graduates, young professionals, unexperienced or experie
 
 ## User Stories
 
-> 👩🏼‍🏫 User #1
-
-I am a new graduate and have a short amount of time off before my new job starts. I want to be able to search available upcoming tours, so that I can travel during my free time.
-
-_Initial features involved_: tour suggestions, available tours, dates of tours 
-
-_Estimation of completion times (ECT)_: Week 1
-
-> 👨🏽‍💻 User #2
-
-I am college student, and for the summer I’m considering to book a tour to travel in Japan. However, I’m nervous because I have never traveled before. I want to find an application that will make my life easier by giving me tour suggestions for my upcoming trip and create an account with them.
-
-_Initial features involved_: account creation, tour suggestions 
-
-_Estimation of completion times (ECT)_: Week 2
-
-> 👩🏾‍💼 User #3
-
-I am a young professional who works in accounting field, I currently have two weeks of vacation and want to take a few days off to travel. I want to be able to search for attractions by destination name or key words and view how much the price will be, so that I don’t have to spend too much time on google researching for them.
-
-_Initial features involved_: attractions displayed by destination name or keywords, prices of tours displayed
-
-_ECT_: Week 3
-
-> 🧑🏻‍💼 User #4
-
-I have never traveled with someone unknown before. I want to utilize a platform that would allow me to customize my profile, so that individuals could get to know me better before embarking on out trip.
-
-_Initial features involved_: profile customization, user information available 
-
-_ECT_: Week 4
-
+ - As a user, I want to be able to sign up for the travel webite.
+ - As a user, I want to be able to log in for the travel website.
+ -   As a user, I want to ensure my sign up credentials fulfill the
+   website's requirement. 
+- As a user, I want to read the feedbacks from previous users.
+- As a user, I want to see the list of upcoming tours and their prices.
+- As a user, I want to be able to search for tours by destination name
+   (city).
+ - As a user, I want to know more about the travel website and their
+   background.  
+- As a user, I want to view the travel website's contact information.  
+- As a user, I want to see previous trips photos.
+- As a user, I want to see the travel website's partners.
+- As a user, I want to have a user dashboard contains my information,
+   resume so that other users can take a look.  
+- As a user, I want to be able to edit my profile and personal information.
 ### Stakeholders
-
 - End users and Beneficiaries
-
 - Direct users
-
 - Beneficiaries: airline companies, local tour vendors, airBnB, local hostels, etc.
-
 - Project build team 
-
  - Developers
-
  - Project Managers
-
  - Legal Department (for advice about data protection regulations, identities scanning)
-
 - Sales and Customer Services team
-
 # Milestone 1.0
 
 ## Iteration 1 
-> 15 calendar days, 11 working days (75% velocity)
-> Days of actual work: 5 * 15 * 0.75 = 56 days
+> 15 calendar days, 11 working days (60% velocity)
+> Days of actual work: 5 * 15 * 0.60 = 45 days
 
 
-![BurnoutIteration1](https://i.imgur.com/X7r4BGD.png)
+![BurnoutIteration1](https://i.imgur.com/NH4dHZJ.jpg)
 
 ### Work breakdown
 
 :white_check_mark: Welcome Page - Kennenth and Tracy 
+(including feedbacks)
 
 > Priority : 10
-
-> EST. 4-5 days
+> EST. 6 days
 
 :white_check_mark: About Us - Kennenth and Tracy 
+(including contact information)
 
 > Priority: 20
 
-> EST. 4-5 days
+> EST. 6 days
 
 :white_check_mark: Sign In Page (Front End) - Kenneth and Tracy
+> Priority: 10
+> EST. 8 days
 
-:white_check_mark: Sign Up Page (Frond End) - Kenneth and Tracy 
-
+:white_check_mark: Sign Up Page (Front End) - Kenneth and Tracy 
+> Priority: 10
+> EST. 9 days
 
 :white_check_mark:  Sign In (connect and perform authentication) - Tayo/Jerry/Karthik 
 
 > Priority: 10
-
 > EST. 8 days 
 
 :white_check_mark:  Sign Up (connect and store in database) - Tayo/Jerry/Karthik
 
 > Priority: 10
-
-> EST. 7-8 days
+> EST. 8 days
 
 ## Iteration 2
-> 12 calendar days, 9 working days (75% Velocity)
+> 12 calendar days, 9 working days (60% Velocity)
+> Days of actual work: 5 * 12 * 0.60 = 36 days 
 
-> Days of actual work: 5 * 12 * 0.75 = 45 days 
 
-
-![Iteration2Burnout](https://i.imgur.com/y9EJmdd.png)
+![Iteration2Burnout](https://i.imgur.com/bHv78Sn.jpg)
 
 ### Work breakdown 
 
-:white_check_mark:  User Profile & Editing Page - Tracy/Tayo
+:white_check_mark:  User Profile (front end) Tracy/Ken/Tayo
+> Priority: 30
+> EST.  9 days
+
+:white_check_mark: Editing Page (front end) - Tracy/Tayo/Karthik
 > Priority: 20
-
-> EST. 10 days
-
-
-
-:white_check_mark:  Tour and Preferences builder - Jerry/Tracy
-> Questionaires with multiple choices and fill-in answers, connect to the database
-
-> Priority: 20
-
-> EST. 10 days 
+> EST.  9 days
 
 :white_check_mark:  Tour packages display page - Jerry/Tracy 
+(including tour names, prices, EST. departure dates)
 > Priority: 20
-
-> EST. 13 days 
+> EST.  9 days 
 
 :white_check_mark:  Search bar for tours - Tracy/Jerry
 > Priority: 30
-
-> EST. 12 days 
+> EST.  9 days 
 
 ### Velocity 
 
 * Total Day: 27 calendar days (until 11/03/2020 Milestone 1 is due)
-
 * Working Day: 20 days 
-
-* Velocity. = ~75% (subject to change. Range from 65% - 75%) 
-
+* Velocity. = ~60% (subject to change. Range from 60% - 75%) 
 
 **Team's Trello link:** https://trello.com/b/gdYNZyem
 
@@ -299,4 +256,5 @@ _ECT_: Week 4
 4. Other users can review the booked-users' dashboards
 5. Users are able to send messages to each other
 6. After booking, user can have access to tour information including maps, destination information, schedule of the tour with reminder alarm. 
+
 
