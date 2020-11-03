@@ -35,7 +35,9 @@ def login(request):
 def signup(request):
     if request.method == 'POST':
 
-        username = request.POST['name']
+        username = request.POST['username']
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
         email = request.POST['email']
         pass1 = request.POST['pass']
         pass2 = request.POST['re_pass']
@@ -48,7 +50,7 @@ def signup(request):
             messages.info(request, 'confirm password is mismatched')
 
         else:
-            user = User.objects.create_user(username=username, password=pass1, email=email)
+            user = User.objects.create_user(username=username, password=pass1, email=email, first_name=first_name, last_name=last_name)
             user.save()
             return redirect('login')
     return render(request, "signup.html")
