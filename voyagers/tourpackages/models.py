@@ -17,6 +17,7 @@ class Attraction(models.Model):
     city = models.CharField(max_length=30, default='')
     attractionName = models.CharField(max_length=100)
     attractionDescription = models.TextField()
+    departure = models.DateField(null=True, blank=True)
     price = models.FloatField()
     image = models.ImageField(null=True, blank=True)
 
