@@ -254,7 +254,6 @@ College students, newly graduates, young professionals, unexperienced or experie
 2. Matching companions based on tour preferences 
 3. Tours detail and booked users display 
 4. Other users can review the booked-users' dashboards
-5. Users are able to send messages to each other
-6. After booking, user can have access to tour information including maps, destination information, schedule of the tour with reminder alarm. 
+
 
 
