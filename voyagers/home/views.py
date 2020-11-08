@@ -3,7 +3,9 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User,auth
 from .forms import UserRegisterForm
 from django.contrib import messages
+from random import randint
 
+username_as_id = ""
 
 # Create your views here.
 def index(request):
@@ -22,6 +24,7 @@ def login(request):
         user = auth.authenticate(username=username, password=pass1)
         if user:
             auth.login(request, user)
+            username_as_id = request.POST['username']
             return redirect("index")
         else:
             messages.info(request, "Invalid Credentials")
