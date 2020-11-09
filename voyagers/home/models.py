@@ -9,7 +9,7 @@ class User_Profile(models.Model):
     Country = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.first_name
+        return self.user_id
 
 
 # class customer(models.Model):

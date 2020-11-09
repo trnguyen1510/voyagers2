@@ -9,6 +9,7 @@ def tours(request):
  
     attractions = Attraction.objects.all()
     context = dict(attraction=attractions)
+    #print(context)
     if(request.GET.get('q')):
         a = (request.GET.get('q'))
         attractionSearch = Attraction.objects.all().filter(
