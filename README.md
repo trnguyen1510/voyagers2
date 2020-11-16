@@ -52,7 +52,7 @@ C:\Users\Name\Voyagers> env\Scripts\activate
 `````````````
 4. Install dependencies listed in the requirement.txt:
  ```sh
-(env)$ python install -r requirements.txt 
+(env)$ pip install -r requirements.txt 
 `````````````
 Note the `(env)` in front of the prompt. This indicates that this terminal
 session operates in a virtual environment set up by `py -m venv env`.
@@ -241,7 +241,7 @@ College students, newly graduates, young professionals, unexperienced or experie
 
  - Tracy Nguyen
 
- - Kennenth Carmona
+ - Kenneth Carmona
 
  - Tayo Arikenbi
 
