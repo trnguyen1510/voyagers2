@@ -780,7 +780,7 @@ body {
 }
 
 .alert {
-  color: #b83b5e;
+color: #b83b5e;
   border-radius: 25px;
   border: 2px solid #b83b5e;
   font-size: 1.1rem;
