@@ -25,13 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('', include('dashboard.urls')),
-<<<<<<< HEAD
-    path('', include('tourpackages.urls')),
-]
-
-
-urlpatterns += [path('', RedirectView.as_view(url='/home', permanent=True)), ]
-=======
     path('', include('tourpackages.urls'))
 
 
@@ -40,6 +33,5 @@ urlpatterns += [path('', RedirectView.as_view(url='/home', permanent=True)), ]
 
 
 urlpatterns += [path('', RedirectView.as_view(url='', permanent=True)), ]
->>>>>>> e41371ada3c229faca904d093d87e097858decb5
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

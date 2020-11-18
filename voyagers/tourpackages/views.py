@@ -18,13 +18,9 @@ def tours(request):
 
     # attractionSearch = Attraction.objects.all().filter(attractionName='Shanghai')
     return render(request, 'tours.html', context)
-<<<<<<< HEAD
-
-=======
     
 def detail(request):
     return render(request,'tourdetail.html')
->>>>>>> e41371ada3c229faca904d093d87e097858decb5
 
 # class attractionSearch(ListView):
     # paginate_by = 10
