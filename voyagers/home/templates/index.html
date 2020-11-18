@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="../static/images/untitled-design-128x128-1.png" type="image/x-icon">
+    <meta name="description" content="">
+
+
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="../static/tether/tether.min.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../static/dropdown/css/style.css">
+    <link rel="stylesheet" href="../static/animatecss/animate.css">
+    <link rel="stylesheet" href="../static/socicon/css/styles.css">
+    <link rel="stylesheet" href="../static/theme/css/style.css">
+    <link rel="preload" as="style" href="../static/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="../static/mobirise/css/mbr-additional.css" type="text/css">
+</head>
+
+<body>
+    <!--Navbar starts here-->
+    <section class="menu menu1 cid-scz8qJgP3B" once="menu" id="menu1-k">
+
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+
+
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}">
+                                About us</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black display-4" href="service.html#top">
+                                Services</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}#contact-us">Contacts</a>
+                        </li>
+                    </ul>
+                    {%if user.is_authenticated %}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4"
+                            href="{% url 'tours' %}">
+                            Upcoming Tours</a></div>
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'dashboard' %}">
+                            Profile</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'logout' %}">
+                            Logout</a></div>
+                    {%else%}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4"
+                            href="{% url 'tours' %}">
+                            Upcoming Tours</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'signup' %}">
+                            Sign Up</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'login' %}">
+                            Log In</a></div>
+                    {%endif%}
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!--Navbar ends-->
+
+    <!--Main body starts-->
+    <section class="header6 cid-scza2HGYEb mbr-fullscreen" id="header6-l">
+
+
+
+
+
+        <div class="align-center container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-12">
+                    <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1"><strong>Voyagers</strong>
+                    </h1>
+                    <h2 class="mbr-section-subtitle mbr-fonts-style mbr-white mb-3 display-5">Never Travel Alone</h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features3 cid-sczaZrM03e" id="features4-m">
+
+
+        <div class="container">
+            <div class="mbr-section-head">
+                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>The Most Popular
+                        Destinations</strong></h4>
+
+            </div>
+            <div class="row mt-4">
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="../static/images/mbr-696x522.jpg" alt="" title="">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-5"><strong>Beijing</strong></h5>
+                            <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">China</h6>
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Beijing, China’s sprawling capital, has
+                                history stretching back 3 millennia. Yet it’s known as much for modern architecture as
+                                its ancient sites such as the grand Forbidden City complex, the imperial palace during
+                                the Ming and Qing dynasties. Nearby, the massive Tiananmen Square pedestrian plaza is
+                                the site of Mao Zedong’s mausoleum and the National Museum of China, displaying a vast
+                                collection of cultural relics.</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn item-btn btn-danger display-7" target="_blank">Start Now &gt;</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="../static/images/mbr-696x1044.jpeg" alt="" title="">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-5"><strong>Bali</strong></h5>
+                            <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+                                Indonesia</h6>
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Bali is an Indonesian island known for
+                                its forested volcanic mountains, iconic rice paddies, beaches and coral reefs. The
+                                island is home to religious sites such as cliffside Uluwatu Temple. To the south, the
+                                beachside city of Kuta has lively bars, while Seminyak, Sanur and Nusa Dua are popular
+                                resort towns. The island is also known for its yoga and meditation retreats.</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn item-btn btn-danger display-7" target="_blank">Start Now &gt;</a></div>
+                    </div>
+                </div>
+                <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            <img src="../static/images/mbr-696x464.jpg" alt="" title="">
+                        </div>
+                        <div class="item-content">
+                            <h5 class="item-title mbr-fonts-style display-5"><strong>Paro Valley</strong></h5>
+                            <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">Bhutan</h6>
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">Paro valley extends from the confluence
+                                of the Paro Chhu and the Wang Chhu rivers at Chuzom up to Mt. Jomolhari at the Tibetan
+                                border to the North. This picturesque region is one of the widest valleys in the kingdom
+                                and is covered in fertile rice fields and has a beautiful, crystalline river meandering
+                                down the valley.</p>
+                        </div>
+                        <div class="mbr-section-btn item-footer mt-2"><a href=""
+                                class="btn item-btn btn-danger display-7" target="_blank">Start Now &gt;</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonails3 carousel slide testimonials-slider cid-sczb4dIkqy" data-interval="false"
+        id="testimonials3-n">
+
+        <div class="text-center container">
+            <h3 class="mb-4 mbr-fonts-style display-2">
+                <strong>What Our Fantastic Users Say</strong>
+            </h3>
+
+            <div class="carousel slide" role="listbox" data-pause="true" data-keyboard="false" data-ride="carousel"
+                data-interval="5000">
+                <div class="carousel-inner">
+
+
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="../static/images/team3.jpg">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">"Great App to begin your journey. Great hotel,
+                                    airplane ticket and travel package deals... <br>Gave me chance to meet and travel
+                                    with new friends..."</p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Alexa</strong>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="../static/images/mbr-400x600.jpg" alt="">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">"I was skeptical about meeting with a group of
+                                    strangers at first, but through Voyagers it turned out to be one of my greatest
+                                    experiences..."</p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Linda</strong>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="../static/images/mbr-400x267.jpg" alt="">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">"It was difficult for me to be able to travel with
+                                    friends due to my hectic schedule, but with Voyagers I was able to make new friends
+                                    and travel during any time of the year.."</p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7"><strong>Alex</strong></div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="../static/images/mbr-1-400x267.jpg" alt="">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">"I travel quite a bit for business and even more
+                                    for pleasure and this app is perfect for both. On business trips, I can manage to
+                                    view restaurants options and the most popular things to do. I don't have to look up
+                                    for the best times to go to places when everything is already inside the user
+                                    dashboard. When I travel for pleasure and meet new travel companions, I start with
+                                    Voyagers.</p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>David</strong></div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="user col-md-8">
+                            <div class="user_image">
+                                <img src="../static/images/mbr-1-400x600.jpg" alt="">
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-7">"I have never traveled alone before and especially
+                                    to a new country, but with Voyagers I was able to feel confident about my new
+                                    adventure and the people I was going to be traveling with.."</p>
+                            </div>
+                            <div class="user_name mbr-fonts-style mb-2 display-7">
+                                <strong>Rose</strong></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <a class="carousel-control-prev" role="button" data-slide="prev">
+                        <span aria-hidden="true" class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="carousel-control-next" role="button" data-slide="next">
+                        <span aria-hidden="true" class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer3 cid-sd3FtO0ZcX" once="footers" id="footer3-q">
+
+
+
+
+
+        <div class="container">
+            <div class="media-container-row align-center mbr-white">
+                <div class="row row-links">
+                    <ul class="foot-menu">
+
+
+
+
+
+                        <li class="foot-menu-item mbr-fonts-style display-7">
+                            <a class="text-white text-primary" href="{% url 'about' %}" target="_blank">About us</a>
+                        </li>
+                        <li class="foot-menu-item mbr-fonts-style display-7">
+                            <a class="text-white" href="#" target="_blank">Services</a>
+                        </li>
+                        <li class="foot-menu-item mbr-fonts-style display-7">
+                            <a class="text-white" href="{% url 'about' %}" target="_blank">Contact Us</a>
+                        </li>
+                        <li class="foot-menu-item mbr-fonts-style display-7">
+                            <a class="text-white" href="#" target="_blank">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row social-row">
+                    <div class="social-list align-right pb-2">
+
+
+
+
+
+
+                        <div class="soc-item">
+                            <a href="https://twitter.com/Voyagers" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.facebook.com/pages/voyagers" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.youtube.com/c/voyagers" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-copirayt">
+                    <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">Copyright © 2020 Voyagers
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../static/web/assets/jquery/jquery.min.js"></script>
+    <script src="../static/popper/popper.min.js"></script>
+    <script src="../static/tether/tether.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/smoothscroll/smooth-scroll.js"></script>
+    <script src="../static/dropdown/js/nav-dropdown.js"></script>
+    <script src="../static/dropdown/js/navbar-dropdown.js"></script>
+    <script src="../static/touchswipe/jquery.touch-swipe.min.js"></script>
+    <script src="../static/viewportchecker/jquery.viewportchecker.js"></script>
+    <script src="../static/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
+    <script src="../static/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
+    <script src="../static/theme/js/script.js"></script>
+
+
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
+                class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
+</body>
+
+</html>

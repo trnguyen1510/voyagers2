@@ -1,0 +1,192 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- CSS -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{% static 'images/untitled-design-128x128-1.png' %}" type="image/x-icon">
+    <meta name="description" content="">
+
+
+    <title>Dashboard</title>
+    <!--Mobirise CSS-->
+    <link rel="stylesheet" href="{% static 'web/assets/mobirise-icons2/mobirise2.css' %}">
+    <link rel="stylesheet" href="{% static 'tether/tether.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-reboot.min.css' %}">
+    <link rel="stylesheet" href="{% static 'dropdown/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'animatecss/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'socicon/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
+    <link rel="preload" as="style" href="{% static 'mobirise/css/mbr-additional.css' %}">
+    <link rel="stylesheet" href="{% static 'mobirise/css/mbr-additional.css' %}" type="text/css">
+
+    <!-- Vendor CSS Files -->
+    <!-- <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../static/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../static/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="../static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+    <!--CSS-->
+    <link href="../static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top menu starts here  -->
+    <section class="menu menu1 cid-scz8qJgP3B" once="menu" id="menu1-k">
+
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+
+
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'index' %}">
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}">
+                                About us</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black display-4" href="service.html#top">
+                                Services</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}#contact-us">Contacts</a>
+                        </li>
+                    </ul>
+                    {%if user.is_authenticated %}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4"
+                            href="{% url 'tours' %}">
+                            Upcoming Tours</a></div>
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'dashboard' %}">
+                            Profile</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'logout' %}">
+                            Logout</a></div>
+                    {%else%}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4"
+                            href="{% url 'tours' %}">
+                            Upcoming Tours</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'signup' %}">
+                            Sign Up</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'login' %}">
+                            Log In</a></div>
+                    {%endif%}
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Top menu ends  -->
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="d-flex flex-column">
+
+            <div class="profile">
+                <!--img src="../static/img/tracyphoto.jpg" alt="" class="img-fluid rounded-circle"-->
+                <h1 class="text-light"><a href="index.html">{{ user.first_name }}</a></h1>
+                <h1 class="text-light"><a href="index.html">{{ user.last_name }}</a></h1>
+                <div class="social-links mt-3 text-center">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://www.facebook.com/yumitnguyen/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://www.instagram.com/winniethet/" class="instagram"><i
+                            class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="{% url 'dashboard' %}"><i class="bx bx-home"></i> <span>Home</span></a>
+                    </li>
+                    <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+                    <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                    <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+                    <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
+                    <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+                    <li><a href="{% url 'account' %}"><i class="bx bx-edit-alt"></i> Setting</a></li>
+
+                </ul>
+            </nav><!-- .nav-menu -->
+            <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+        </div>
+    </header><!-- End Header -->
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Vendor JS Files -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../static/vendor/php-email-form/validate.js"></script>
+    <script src="../static/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="../static/vendor/counterup/counterup.min.js"></script>
+    <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../static/vendor/venobox/venobox.min.js"></script>
+    <script src="../static/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="../static/vendor/typed.js/typed.min.js"></script>
+    <script src="../static/vendor/aos/aos.js"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="../static/js/main.js"></script>
+    <!--theme js files-->
+    <script src="{% static 'web/assets/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'popper/popper.min.js' %}"></script>
+    <script src="{% static 'tether/tether.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'smoothscroll/smooth-scroll.js' %}"></script>
+    <script src="{% static 'dropdown/js/nav-dropdown.js' %}"></script>
+    <script src="{% static 'dropdown/js/navbar-dropdown.js' %}"></script>
+    <script src="{% static 'touchswipe/jquery.touch-swipe.min.js' %}"></script>
+    <script src="{% static 'viewportchecker/jquery.viewportchecker.js' %}"></script>
+    <script src="{% static 'theme/js/script.js' %}"></script>
+
+
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
+                class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+
+
+
+</body>
+
+</html>

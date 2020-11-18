@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="../../static/images/untitled-design-128x128-1.png" type="image/x-icon">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../static/fonts/material-icon/css/material-design-iconic-font.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../../static/tether/tether.min.css">
+    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../../static/dropdown/css/style.css">
+    <link rel="stylesheet" href="../../static/animatecss/animate.css">
+    <link rel="stylesheet" href="../../static/socicon/css/styles.css">
+    <link rel="stylesheet" href="../../static/theme/css/style.css">
+    <link rel="preload" as="style" href="../../static/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="../../static/mobirise/css/mbr-additional.css" type="text/css">
+    <!-- Main CSS-->
+    <link href="../../static/signupcss/signup.css" rel="stylesheet" media="all">
+    <!--Boostrap CSS-->
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../../static/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <style>
+        .signup,
+        .main {
+            background: #d2d1f3;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #fddae2, #abaaf0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #fddae2, #abaaf0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+
+        .main {
+            padding: 55px 0 10px 0;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- Menu starts here  -->
+    <section class="menu menu1 cid-scz8qJgP3B" once="menu" id="menu1-k">
+
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+
+
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'index' %}">
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}">
+                                About us</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black display-4" href="service.html#top">
+                                Services</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}#contact-us">Contacts</a>
+                        </li>
+                    </ul>
+                    {%if user.is_authenticated %}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4"
+                            href="{% url 'tours' %}">
+                            Upcoming Tours</a></div>
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'dashboard' %}">
+                            Profile</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'logout' %}">
+                            Logout</a></div>
+                    {%else%}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4"
+                            href="{% url 'tours' %}">
+                            Upcoming Tours</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'signup' %}">
+                            Sign Up</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'login' %}">
+                            Log In</a></div>
+                    {%endif%}
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Menu ends  -->
+
+    <!-- Body starts here -->
+    <!-- Sign up form -->
+    <div class="main">
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign Up</h2>
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{message.tags}}">{{message}}</div>
+                        {% endfor %}
+                        {% endif %}
+                        <form method="POST" class="register-form" id="register-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="last_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="last_name" id="last_name" placeholder="Last Name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="first_name"><i class="zmdi zmdi-account"></i></label>
+                                <input type="text" name="first_name" id="first_name" placeholder="First Name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="username" id="username" placeholder="Username" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password" />
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
+                                    statements in <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="../../static/images/mbr-696x1044.jpeg" alt="sing up image"></figure>
+                        <a href="{% url 'login' %}" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+    </div>
+
+
+    <!-- Body ends here -->
+
+    <!-- Footer -->
+    <section class="footer3 cid-sd3FtO0ZcX" once="footers" id="footer3-13">
+
+
+
+
+
+
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+
+
+
+
+
+                    <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="text-white text-primary" href="{% url 'about' %}" target="_blank">About us</a>
+                    </li>
+                    <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="text-white" href="#" target="_blank">Services</a>
+                    </li>
+                    <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="text-white" href="{% url 'about' %}" target="_blank">Contact Us</a>
+                    </li>
+                    <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="text-white" href="#" target="_blank">Careers</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+
+
+
+
+
+
+                    <div class="soc-item">
+                        <a href="https://twitter.com/Voyagers" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://www.facebook.com/pages/voyagers" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://www.youtube.com/c/voyagers" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">Copyright © 2020 Voyagers
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--template scripts -->
+    <script src="../../static/web/assets/jquery/jquery.min.js"></script>
+    <script src="../../static/popper/popper.min.js"></script>
+    <script src="../../static/tether/tether.min.js"></script>
+    <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../static/smoothscroll/smooth-scroll.js"></script>
+    <script src="../../static/dropdown/js/nav-dropdown.js"></script>
+    <script src="../../static/dropdown/js/navbar-dropdown.js"></script>
+    <script src="../../static/touchswipe/jquery.touch-swipe.min.js"></script>
+    <script src="../../static/viewportchecker/jquery.viewportchecker.js"></script>
+    <script src="../../static/theme/js/script.js"></script>
+
+    <!-- JS -->
+    <script src="../../static/signupjs/signup.js"></script>
+    <script src="../../static/vendor/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Main JS-->
+
+
+
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
+                class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+        <h1>Profile Editing</h1>
+        <p>Editing your <span class="typed" data-typed-items="Name, Job Title, Personal Info"></span></p>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{ noodle_form.as_table }}
+                {{ formset.as_table}}
+
+                <!-- {{ profile_form.as_table }} -->
+            </table>
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+    </div>
+
+</main>
+{% endblock %}
