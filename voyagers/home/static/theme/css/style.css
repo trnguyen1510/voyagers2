@@ -780,7 +780,11 @@ body {
 }
 
 .alert {
+<<<<<<< HEAD
   color: #b83b5e;
+=======
+color: #b83b5e;
+>>>>>>> e41371ada3c229faca904d093d87e097858decb5
   border-radius: 25px;
   border: 2px solid #b83b5e;
   font-size: 1.1rem;

@@ -34,7 +34,11 @@ $ cd Voyagers
 2. Create a virtual environment to install dependencies:
 - For MacOS: 
  ```sh
+<<<<<<< HEAD
 $ pip3 -m venv env 
+=======
+$ python3 -m venv env 
+>>>>>>> e41371ada3c229faca904d093d87e097858decb5
 `````````````
 
 - For Windows:
@@ -52,7 +56,11 @@ C:\Users\Name\Voyagers> env\Scripts\activate
 `````````````
 4. Install dependencies listed in the requirement.txt:
  ```sh
+<<<<<<< HEAD
 (env)$ pip3 install -r requirements.txt 
+=======
+(env)$ pip install -r requirements.txt 
+>>>>>>> e41371ada3c229faca904d093d87e097858decb5
 `````````````
 Note the `(env)` in front of the prompt. This indicates that this terminal
 session operates in a virtual environment set up by `py -m venv env`.
@@ -241,7 +249,11 @@ College students, newly graduates, young professionals, unexperienced or experie
 
  - Tracy Nguyen
 
+<<<<<<< HEAD
  - Kennenth Carmona
+=======
+ - Kenneth Carmona
+>>>>>>> e41371ada3c229faca904d093d87e097858decb5
 
  - Tayo Arikenbi
 

@@ -7,4 +7,7 @@ Pillow==8.0.1
 pymongo==3.11.0
 pytz==2020.4
 sqlparse==0.2.4
+<<<<<<< HEAD
 
+=======
+>>>>>>> e41371ada3c229faca904d093d87e097858decb5

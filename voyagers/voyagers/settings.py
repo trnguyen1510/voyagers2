@@ -15,7 +15,11 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+<<<<<<< HEAD
 
+=======
+print ("base dir path", BASE_DIR)
+>>>>>>> e41371ada3c229faca904d093d87e097858decb5
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -126,15 +130,30 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+=======
+
+STATICFILES_DIRS = [
+    'home/static',
+]
+
+>>>>>>> e41371ada3c229faca904d093d87e097858decb5
 MEDIA_URL = '/images/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
+<<<<<<< HEAD
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 LOGIN_REDIRECT_URL = '/dashboard/'
 
 LOGIN_URL ='/login/'
+=======
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+print("STATIC URL", STATIC_URL)
+>>>>>>> e41371ada3c229faca904d093d87e097858decb5
