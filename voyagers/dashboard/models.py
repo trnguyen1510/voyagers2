@@ -42,10 +42,3 @@ def create_profile(sender, **kwargs):
 post_save.connect(create_profile, sender=User)
 
 
-# post_save.connect(create_profile, sender=User)
-
-# def __str__(self):
-#     return self.user.username
-
-# class Meta:
-#     verbose_name_plural = 'profiles'
