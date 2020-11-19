@@ -109,16 +109,16 @@
         <div class="d-flex flex-column">
 
             <div class="profile">
-                <img src="../static/img/tracyphoto.jpg" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="index.html">Tracy Nguyen</a></h1>
+                <!--img src="../static/img/tracyphoto.jpg" alt="" class="img-fluid rounded-circle"-->
+                <h1 class="text-light"><a href="index.html">{{ user.first_name }}</a></h1>
+                <h1 class="text-light"><a href="index.html">{{ user.last_name }}</a></h1>
                 <div class="social-links mt-3 text-center">
                     <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                     <a href="https://www.facebook.com/yumitnguyen/" class="facebook"><i class="bx bxl-facebook"></i></a>
                     <a href="https://www.instagram.com/winniethet/" class="instagram"><i
                             class="bx bxl-instagram"></i></a>
                     <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                    <a href="https://www.linkedin.com/in/tramnguyen1510/" class="linkedin"><i
-                            class="bx bxl-linkedin"></i></a>
+                    
                 </div>
             </div>
 
@@ -131,7 +131,7 @@
                     <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
                     <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
                     <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-                    <li><a href="{% url 'editing' %}"><i class="bx bx-edit-alt"></i> Setting</a></li>
+                    <li><a href="{% url 'account' %}"><i class="bx bx-edit-alt"></i> Setting</a></li>
 
                 </ul>
             </nav><!-- .nav-menu -->

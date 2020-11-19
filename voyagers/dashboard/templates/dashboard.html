@@ -5,10 +5,18 @@
 
 
 <!-- ======= Hero Section ======= -->
+
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-        <h1>Tracy Nguyen</h1>
-        <p>I'm <span class="typed" data-typed-items="Graduate Student, Developer, Freelancer, Photographer"></span></p>
+        <h1> {{ user.first_name }} {{ user.last_name }}</h1>
+
+        <p><span class="typed"
+                data-typed-items="Welcome Voyager, Create your profile so people can learn more about you!"></span></p>
+        <!--{% if user.is_authenticated %}
+        <h2>Your username is {{ username }}</h2>
+        <h2>Your user id is {{ userid}}</h2>
+        <h2>Your email is {{ useremail}}</h2>
+        {% endif %}-->
     </div>
 </section>
 <!-- End Hero -->
@@ -24,17 +32,7 @@
                     <div class="section-title">
                         <h2>About</h2>
 
-                        <p id="editable" contenteditable=false>Hi everyone,<br>
-                            My name is Tracy (Vietnamese name is Tram). I'm originally from Vietnam. I've studied and
-                            lived in the U.S. since 16 years old. Currently,
-                            I am a graduate student from Claremont Graduate University, majoring in Data Analysis.<br>
-                            I always visit my parents back in my country during summer break as well as spend time to
-                            travel abroad to different countries.<br>
-                            For this year, I wanted to take my travel experience to another level by travel with new
-                            friends. <br>
-                            I would love to experience different cultures, food and places and learn more about the
-                            countries' background, history, and people.
-                        </p>
+                        <p>{{ user.profile.bio }}</p>
                     </div>
                 </div>
                 <!--Editing button here-->
@@ -43,31 +41,36 @@
 
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-right">
-                    <img src="../static/img/tracyphoto.jpg" class="img-fluid" alt="">
+                    <img src="{{ profile.profile_pic.url }}" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3>Graduate Student</h3>
+                    <h3>{{ user.profile.occupation }}</h3>
                     <p class="font-italic" id="editable" contenteditable=false>
                         Here is a little bit more about myself
                     </p>
                     <div class="row">
                         <div class="col-lg-6">
                             <ul>
-                                <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong>15 October 1995</li>
+                                <li><i class="icofont-rounded-right"></i>
+                                    <strong>Birthday:</strong>{{ user.profile.date_of_birth }}</li>
                                 </li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +123 456 7890</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Location:</strong>San Diego,CA USA
+                                <li><i class="icofont-rounded-right"></i>
+                                    <strong>Website:</strong>{{ user.profile.website }}</li>
+                                <li><i class="icofont-rounded-right"></i>
+                                    <strong>Phone:</strong>{{ user.profile.telephone }}</li>
+                                <li><i class="icofont-rounded-right"></i>
+                                    <strong>Location:</strong>{{ user.profile.city }}, {{ user.profile.state }}
                                 </li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul>
-                                <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 27</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Master</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>PhEmailone:</strong> email@example.com
+                                <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> </li>
+                                <li><i class="icofont-rounded-right"></i>
+                                    <strong>Degree:</strong>{{ user.profile.degree }}</li>
+                                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> {{ user.email }}
                                 </li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+
                             </ul>
                         </div>
                     </div>
@@ -425,7 +428,7 @@
 
             <div class="section-title">
                 <h2>What I'm looking for from my travel buddies</h2>
-                <p>Honest, educated, open-mined</p>
+                <p>Honest, educated, open-minded</p>
             </div>
 
         </div>
@@ -433,69 +436,87 @@
 
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section class="contacts2 cid-sd3WN0L5i5" id="contacts2-16">
+        <!---->
+
+
         <div class="container">
+            <div class="mbr-section-head" id="contact-us">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Have any questions?&nbsp;</strong></h3>
 
-            <div class="section-title">
-                <h2>Contact</h2>
-                <p>Ways to contact me</p>
             </div>
-
-            <div class="row" data-aos="fade-in">
-
-                <div class="col-lg-5 d-flex align-items-stretch">
-                    <div class="info">
-                        <div class="email">
-                            <i class="icofont-envelope"></i>
-                            <h4>Email:</h4>
-                            <p>tracy@example.com</p>
+            <div class="row justify-content-center mt-4">
+                <div class="card col-12 col-md-6">
+                    <div class="card-wrapper">
+                        <div class="image-wrapper">
+                            <span class="mbr-iconfont mobi-mbri-phone mobi-mbri"
+                                style="color: rgb(247, 157, 157); fill: rgb(247, 157, 157);"></span>
+                        </div>
+                        <div class="text-wrapper">
+                            <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                                <strong>Phone</strong>
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style display-7"><a href="tel:1-8001234567"
+                                    class="text-danger">1(800) 123 45 67</a>
+                            </p>
                         </div>
                     </div>
-
-                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" data-rule="email"
-                                        data-msg="Please enter a valid email" />
-                                    <div class="validate"></div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Subject</label>
-                                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
-                                    data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Message</label>
-                                <textarea class="form-control" name="message" rows="10" data-rule="required"
-                                    data-msg="Please write something for us"></textarea>
-                                <div class="validate"></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
-                        </form>
-                    </div>
-
                 </div>
-
+                <div class="card col-12 col-md-6">
+                    <div class="card-wrapper">
+                        <div class="image-wrapper">
+                            <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"
+                                style="color: rgb(247, 157, 157); fill: rgb(247, 157, 157);"></span>
+                        </div>
+                        <div class="text-wrapper">
+                            <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                                <strong>Email</strong>
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                <a href="mailto: {{ user.email }}" class="text-danger">{{ user.email }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-6">
+                    <div class="card-wrapper">
+                        <div class="image-wrapper">
+                            <span class="mbr-iconfont mobi-mbri-globe mobi-mbri"
+                                style="color: rgb(247, 157, 157); fill: rgb(247, 157, 157);"></span>
+                        </div>
+                        <div class="text-wrapper">
+                            <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                                <strong>Mailing Address</strong>
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                {{ user.profile.address1 }} {{ user.profile.address2 }}
+                                {{ user.profile.city }}
+                                {{ user.profile.state }}
+                                {{ user.profile.zipcode }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-6">
+                    <div class="card-wrapper">
+                        <div class="image-wrapper">
+                            <span class="mbr-iconfont mobi-mbri-bulleted-list mobi-mbri"
+                                style="color: rgb(247, 157, 157); fill: rgb(247, 157, 157);"></span>
+                        </div>
+                        <div class="text-wrapper">
+                            <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                                <strong>Working Hours</strong>
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style display-7">Monday-Sunday:&nbsp; 9:00 - 18:00<br></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-    </section><!-- End Contact Section -->
+        </div>
+    </section>
+    <!-- End Contact Section -->
 
 </main><!-- End #main -->
-</div>
-</div>
+
 
 {% endblock %}

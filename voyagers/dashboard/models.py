@@ -1,27 +1,44 @@
+from datetime import date
 from django.db import models
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+
 
 # Create your models here.
+
+
 class Profile(models.Model):
-    firstname = models.CharField(max_length=50)
-    lastname = models.CharField(max_length=50)
-    middlename = models.CharField(max_length=50)
-    email = models.EmailField(max_length=254)
-    password = models.CharField(max_length=50, default='abcde')
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    middlename = models.CharField(max_length=50, blank=True, default='')
+    telephone = models.CharField(max_length=13, blank=True, default='')
+    occupation = models.CharField(max_length=100, default='Occupation', blank=True)
+    degree = models.CharField(max_length=100,default='')
+    website = models.URLField(default='', blank=True)
     date_of_birth = models.DateField(auto_now=False)
-    twitter_handle = models.CharField(max_length=20)
-    fb_handle = models.CharField(max_length=20)
-    insta_handle = models.CharField(max_length=20)
-    telephone = models.CharField(max_length=13)
-    address1 = models.TextField()
-    address2 = models.TextField()
+    bio = models.TextField(default='', blank=True)
+    twitter_handle = models.URLField(default='', blank=True)
+    fb_handle = models.URLField(default='', blank=True)
+    insta_handle = models.URLField(default='', blank=True)
+    address1 = models.TextField(blank=True, default='')
+    address2 = models.TextField(blank=True, default='')
     city = models.CharField(max_length=30)
-    state  = models.CharField(max_length=30)
+    state = models.CharField(max_length=30)
     zipcode = models.IntegerField(blank=True, null=True)
-    profile_pic = models.ImageField()
-    about = models.TextField()
+    # photo = FileField(verbose_name=_("Profile Picture"),
+    #                   upload_to=upload_to(
+    #     "main.UserProfile.photo", "profiles"),
+    #     format="Image", max_length=255, null=True, blank=True)
 
     def __str__(self):
-        return 'Profile #{}'.format(self.id)
+        return self.user.username
 
-    class Meta:
-        verbose_name_plural = 'profiles'
+
+
+def create_profile(sender, **kwargs):
+    user = kwargs["instance"]
+    if kwargs["created"]:
+        user_profile = Profile(user=user)
+        user_profile.save()
+post_save.connect(create_profile, sender=User)
+
+

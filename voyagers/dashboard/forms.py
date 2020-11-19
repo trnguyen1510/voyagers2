@@ -1,14 +1,33 @@
 from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.forms import ModelForm
+
 from .models import Profile
 
-class ProfileForm(ModelForm):
-	password = forms.CharField(widget=forms.PasswordInput)
-	class Meta:
-		model = Profile
-		fields = ('firstname', 'lastname', 'middlename', 'email', 'date_of_birth', 'twitter_handle', 'fb_handle', 'insta_handle', 'telephone', 'address1', 'address2', 'city', 'state', 'zipcode', 'profile_pic', 'about')
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email')
 
 
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
-		self.fields['address1'].widget.attrs.update({'class' : 'form-group', 'placeholder': 'Enter Address Here'})
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        # Note that we didn't mention user field here.
+        fields = ('middlename',
+                  'telephone',
+                  'website',
+                  'occupation',
+                  'date_of_birth',
+                  'bio',
+                  'twitter_handle',
+                  'fb_handle',
+                  'insta_handle',
+                  'address1',
+                  'address2',
+                  'city',
+                  'state',
+                  'zipcode',
+                  )
