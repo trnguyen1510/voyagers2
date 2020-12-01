@@ -4,7 +4,7 @@ from django.contrib import admin
 
 from .models import *
 
-admin.site.register(Customer)
+
 
 
 class AttractionAdmin(admin.ModelAdmin):
@@ -12,5 +12,4 @@ class AttractionAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Attraction, AttractionAdmin)
-admin.site.register(Location)
-admin.site.register(Package)
+
