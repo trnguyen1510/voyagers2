@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
     <link rel="preload" as="style" href="{% static 'mobirise/css/mbr-additional.css' %}">
     <link rel="stylesheet" href="{% static 'mobirise/css/mbr-additional.css' %}" type="text/css">
-    <link href="../static/css/stylesurvey.css" rel="stylesheet">
+    <link href="../static/css/surveysteps.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
 
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"> -->
@@ -94,11 +94,11 @@
         </nav>
     </section>
     <!-- Menu ends  -->
+    <section class="survey">
+        {% block content %}
 
-    {% block content %}
-
-    {% endblock content %}
-
+        {% endblock content %}
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -141,13 +141,12 @@
     
     <script src="{% static 'theme/js/script.js' %}">
     </script>
-    
+
 
     <!-- jQuery easing plugin -->
-    <script src="../static/js/survey.js"></script>
-    <script src="../static/js/jquery.steps.js"></script>
-    <script src="../static/js/jquery-3.3.1.min.js"></script>
-    <script src="../static/js/jquery.steps.min.js"></script>
+    <script src="../static/js/survey1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 
 
 
