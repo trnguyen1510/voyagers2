@@ -43,10 +43,6 @@
         </div>
     </div>
 
-
-
-
-
     <div class="form-outer">
         <form action="#">
             <div class="page slide-page">
@@ -55,37 +51,34 @@
                 <div class="field">
                     <div class="label">
                         Country</div>
-                    <select>
-                        <option>United States of America</option>
-                        <option>China</option>
-                        <option>France</option>
+                    <select id="level1">
+                        <option>-----</option>
+
+
                     </select>
                 </div>
                 <div class="field">
                     <div class="label">
                         City</div>
-                    <select>
-                        <option>United States of America</option>
-                        <option>China</option>
-                        <option>France</option>
+                    <select id="level2">
+                        <option>-----</option>
+
                     </select>
                 </div>
                 <div class="field">
                     <div class="label">
                         Tour</div>
-                    <select>
-                        <option>United States of America</option>
-                        <option>China</option>
-                        <option>France</option>
+                    <select id="level3">
+                        <option>-----</option>
+
                     </select>
                 </div>
                 <div class="field">
                     <div class="label">
                         Departure date</div>
-                    <select>
-                        <option>United States of America</option>
-                        <option>China</option>
-                        <option>France</option>
+                    <select id="level4">
+                        <option>-------</option>
+
                     </select>
                 </div>
 
@@ -96,7 +89,7 @@
             </div>
             <div class="page">
                 <div class="title"> Activity Preferences</div>
-                
+
 
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -128,11 +121,11 @@
                         Foodie
                     </label>
                 </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Other activity Preferences</div>
-                                    <input type="text">
-                                </div>
+                <div class="field">
+                    <div class="label">
+                        Other activity Preferences</div>
+                    <input type="text">
+                </div>
 
                 <div class="field btns">
                     <button class="prev-1 prev">Previous</button>
@@ -184,11 +177,5 @@
 </div>
 <!-- Somehow I got an error, so I comment the script tag, just uncomment to use -->
 <!-- <script src="script.js"></script> -->
-
-
-
-
-
-
 
 {% endblock content %}
