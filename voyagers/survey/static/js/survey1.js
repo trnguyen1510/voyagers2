@@ -71,6 +71,8 @@ prevBtnFourth.addEventListener("click", function (event) {
     current -= 1;
 });
 
+
+// DropDown function
 var myData = [
     [
         "United States of America",
@@ -82,7 +84,7 @@ var myData = [
         "United States of America",
         "San Diego",
         "San Diego. Explore the most popular attractions in the city!",
-        "2021-05-10"
+        "2021-01-16"
     ],
     ["China", "Beijing", "Discover Beijing!", "2021-04-07"],
     ["China", "Shanghai", "Exploring Shanghai", "2021-04-08"],
@@ -93,13 +95,13 @@ var myData = [
         "Singapore",
         "Singapore",
         "Amazing 3-day Adventure at Singapore!",
-        "2021-03-05"
+        "2021-04-05"
     ],
     [
         "United Arab Emirates",
         "Dubai",
         "Relish in the luxurious sands of Dubai!",
-        "2021-03-20"
+        "2021-07-20"
     ],
     [
         "Thailand",
@@ -175,5 +177,5 @@ function filterArray(data, filtersAsArray) {
 
 document.getElementById("level1").addEventListener("change", applyDropDown);
 document.getElementById("level2").addEventListener("change", applyDropDown2);
-document.getElementById("level2").addEventListener("change", applyDropDown3);
+document.getElementById("level3").addEventListener("change", applyDropDown3);
 document.addEventListener("DOMContentLoaded", afterDocumentLoads);

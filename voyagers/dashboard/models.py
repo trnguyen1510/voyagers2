@@ -21,8 +21,8 @@ class Profile(models.Model):
     insta_handle = models.URLField(default='', blank=True)
     address1 = models.TextField(blank=True, default='')
     address2 = models.TextField(blank=True, default='')
-    city = models.CharField(max_length=30)
-    state = models.CharField(max_length=30)
+    city = models.CharField(max_length=30,blank=False,default='')
+    state = models.CharField(max_length=30,blank=False,default='')
     zipcode = models.IntegerField(blank=True, null=True)
     # photo = FileField(verbose_name=_("Profile Picture"),
     #                   upload_to=upload_to(
