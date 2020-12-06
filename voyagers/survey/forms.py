@@ -67,5 +67,4 @@ class surveyForm(forms.ModelForm):
     country = forms.CharField(widget=forms.Select(choices="countryChoices"))
     city = forms.CharField(widget=forms.Select(choices="cityChoices"))
     tour = forms.CharField(widget=forms.Select(choices="tourChoices"))
-    departure = forms.CharField(
-        widget=forms.Select(choices="departureChoices"))
+    departure = forms.CharField(widget=forms.Select(choices="departureChoices"))

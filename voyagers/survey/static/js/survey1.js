@@ -74,41 +74,22 @@ prevBtnFourth.addEventListener("click", function (event) {
 
 // DropDown function
 var myData = [
-    [
-        "United States of America",
-        "New York",
-        "New York 3-day Adventure. Explore the City!",
-        "2021-05-10"
-    ],
-    [
-        "United States of America",
-        "San Diego",
-        "San Diego. Explore the most popular attractions in the city!",
-        "2021-01-16"
-    ],
+    ["United States of America", "New York", "New York 3-day Adventure. Explore the City!", "2021-05-10"],
+    ["United States of America", "San Diego", "San Diego. Explore the most popular attractions in the city!", "2021-01-16"],
     ["China", "Beijing", "Discover Beijing!", "2021-04-07"],
     ["China", "Shanghai", "Exploring Shanghai", "2021-04-08"],
     ["France", "Paris", "Walk through the Streets of Paris!", "2021-03-31"],
     ["France", "Bordeaux", "Exploring Bordeaux", "2021-03-31"],
     ["England", "London", "Discover London!", "2021-04-04"],
-    [
-        "Singapore",
-        "Singapore",
-        "Amazing 3-day Adventure at Singapore!",
-        "2021-04-05"
-    ],
-    [
-        "United Arab Emirates",
-        "Dubai",
-        "Relish in the luxurious sands of Dubai!",
-        "2021-07-20"
-    ],
-    [
-        "Thailand",
-        "Bangkok",
-        "Experience local cultural and heritage",
-        "2021-03-05"
-    ]
+    ["Singapore", "Singapore", "Amazing 3-day Adventure at Singapore!", "2021-04-05"],
+    ["United Arab Emirates", "Dubai", "Relish in the luxurious sands of Dubai!", "2021-07-20"],
+    ["Thailand", "Bangkok", "Experience local cultural and heritage", "2021-03-05"],
+    ["United States of America", "Washington, D.C.", "Discover the Capital!", "2021-06-21"],
+    ["China", "Tianjin", "Tianjin 3-day Exploration", "2021-08-24"],
+    ["France", "Marseille", "Stroll through Marseille!", "2021-07-24"],
+    ["England", "Manchester", "Discover Manchester!", "2021-06-10"],
+    ["United Arab Emirates", "Abu Dhabi", "Amazing 3-day Abu Dhabi Adventure", "2021-09-18"],
+
 ];
 
 function makeDropDown(data, filtersAsArray, targetElement) {
@@ -131,6 +112,7 @@ function applyDropDown2() {
     const selectLevel2Value = document.getElementById("level2").value;
     const selectLevel3 = document.getElementById("level3");
     makeDropDown(myData, [selectLevel1Value, selectLevel2Value], selectLevel3);
+    applyDropDown3();
 }
 
 function applyDropDown3() {
