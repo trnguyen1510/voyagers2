@@ -42,7 +42,7 @@ submitBtn.addEventListener("click", function () {
     current += 1;
     setTimeout(function () {
         alert("Your Form Successfuly Submitted");
-        location.replace("/dashboard");
+        location.reload();
     }, 100);
 });
 
