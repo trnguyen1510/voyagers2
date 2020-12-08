@@ -1,1 +1,1 @@
-web: gunicorn voyagers.wsgi --log-file -
+web: gunicorn voyagers.wsgi

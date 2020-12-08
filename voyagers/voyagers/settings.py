@@ -16,18 +16,18 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-print ("base dir path", BASE_DIR)
+print("base dir path", BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'y)nj1vyk3v4-vq=!ez@578wty7(d8@lp#*a*r6hnn1#(#2g$ls'
-
+# SECRET_KEY = 'y)nj1vyk3v4-vq=!ez@578wty7(d8@lp#*a*r6hnn1#(#2g$ls'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['voyagers-web.herokuapp.com']
 
 
 # Application definition
@@ -83,12 +83,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         "CLIENT": {
-           "name": "voyagers",
-           "host": "mongodb+srv://Voyagers:Voyagers123@cluster0.zshph.mongodb.net/<dbname>?retryWrites=true&w=majority",
-           "username": "Voyagers",
-           "password": "Voyagers123",
-           "authMechanism": "SCRAM-SHA-1",
-        }, 
+            "name": "voyagers",
+            "host": "mongodb+srv://Voyagers:Voyagers123@cluster0.zshph.mongodb.net/<dbname>?retryWrites=true&w=majority",
+            "username": "Voyagers",
+            "password": "Voyagers123",
+            "authMechanism": "SCRAM-SHA-1",
+        },
     }
 }
 
@@ -143,4 +143,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 print("STATIC URL", STATIC_URL)
 
 # Configure Django App for Heroku.
-
