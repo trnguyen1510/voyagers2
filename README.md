@@ -251,9 +251,10 @@ College students, newly graduates, young professionals, unexperienced or experie
 # Milestone 2.0
 
 1. Tour preferences quiz
-2. Matching companions based on tour preferences 
-3. Tours detail and booked users display 
-4. Other users can review the booked-users' dashboards
+2. Changed SQLite to MongoDB platform
+3. Tours detail for each tour package
+4. Editing and saving user profile and information and append it to user's dashboard
+
 
 
 
