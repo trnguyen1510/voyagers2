@@ -26,9 +26,14 @@ urlpatterns = [
     path('', include('home.urls')),
     path('', include('dashboard.urls')),
     path('', include('tourpackages.urls')),
+    path('', include('survey.urls'))
+    
+
+
+
 ]
 
 
-urlpatterns += [path('', RedirectView.as_view(url='/home', permanent=True)), ]
+urlpatterns += [path('', RedirectView.as_view(url='', permanent=True)), ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey</title>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="../static/images/untitled-design-128x128-1.png" type="image/x-icon">
+    <meta name="description" content="">
+
+
+
+    <link rel="stylesheet" href="{% static 'web/assets/mobirise-icons2/mobirise2.css' %}">
+    <link rel="stylesheet" href="{% static 'tether/tether.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-reboot.min.css' %}">
+    <link rel="stylesheet" href="{% static 'dropdown/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'animatecss/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'socicon/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
+    <link rel="preload" as="style" href="{% static 'mobirise/css/mbr-additional.css' %}">
+    <link rel="stylesheet" href="{% static 'mobirise/css/mbr-additional.css' %}" type="text/css">
+    <link href="../static/css/surveysteps.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"> -->
+
+</head>
+
+<body>
+    <!-- Menu starts here  -->
+    <section class="menu menu1 cid-scz8qJgP3B" once="menu" id="menu1-k">
+
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+
+
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'index' %}">
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}">
+                                About us</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black display-4" href="service.html#top">
+                                Services</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="{% url 'about' %}#contact-us">Contacts</a>
+                        </li>
+                    </ul>
+                    {%if user.is_authenticated %}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'dashboard' %}">
+                            Profile</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'logout' %}">
+                            Logout</a></div>
+                    {%else%}
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4"
+                            href="{% url 'tours' %}">
+                            Upcoming Tours</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'signup' %}">
+                            Sign Up</a></div>
+
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4"
+                            href="{% url 'login' %}">
+                            Log In</a></div>
+                    {%endif%}
+                </div>
+            </div>
+
+        </nav>
+    </section>
+    <!-- Menu ends  -->
+    <section class="survey">
+        {% block content %}
+
+        {% endblock content %}
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script> -->
+
+    <!--theme js files-->
+    <link src="{% static 'web/assets/jquery/jquery.min.js' %}">
+
+    <link src="{% static 'popper/popper.min.js' %}">
+
+    <link src="{% static 'tether/tether.min.js' %}">
+
+    <link src="{% static 'bootstrap/js/bootstrap.min.js' %}">
+
+    <link src="{% static 'smoothscroll/smooth-scroll.js' %}">
+
+    <link src="{% static 'dropdown/js/nav-dropdown.js' %}">
+
+    <link src="{% static 'dropdown/js/navbar-dropdown.js' %}">
+
+    <link src="{% static 'touchswipe/jquery.touch-swipe.min.js' %}">
+
+    <link src="{% static 'viewportchecker/jquery.viewportchecker.js' %}">
+
+
+    <link src="{% static 'formstyler/jquery.formstyler.js' %}">
+
+    <link src="{% static 'formstyler/jquery.formstyler.min.js' %">
+    <link src="{% static 'datepicker/jquery.datetimepicker.full.js' %">
+    <link src="{% static 'mbr-switch-arrow/mbr-switch-arrow.js' %">
+    <link src="{% static 'formoid/formoid.min.js' %">
+    
+    <script src="{% static 'theme/js/script.js' %}">
+    </script>
+
+
+    <!-- jQuery easing plugin -->
+    <script src="../static/js/survey1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+
+
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
+                class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+
+
+
+
+</body>
+
+</html>

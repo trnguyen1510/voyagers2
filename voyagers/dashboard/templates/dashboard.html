@@ -55,7 +55,7 @@
                                     <strong>Birthday:</strong>{{ user.profile.date_of_birth }}</li>
                                 </li>
                                 <li><i class="icofont-rounded-right"></i>
-                                    <strong>Website:</strong>{{ user.profile.website }}</li>
+                                    <strong>Website:</strong>{{ user.profile.website}}</li>
                                 <li><i class="icofont-rounded-right"></i>
                                     <strong>Phone:</strong>{{ user.profile.telephone }}</li>
                                 <li><i class="icofont-rounded-right"></i>
@@ -122,6 +122,85 @@
                         <p><strong>Tours saved</strong></p>
                     </div>
                 </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>My Preferred Future Tour</h2>
+            </div>
+
+            <div class="row no-gutters">
+
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="count-box">
+                        <i class="icofont-airplane-alt"></i>
+                        <span style="font-size:20px">{{ user.survey.country }}</span>
+                        <p><strong>Country</strong></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="count-box">
+                        <i class="icofont-world"></i>
+                        <span style="font-size:20px">{{ user.survey.city }}</span>
+                        <p><strong>City</strong></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="count-box">
+                        <i class="icofont-users-social"></i>
+                        <span style="font-size:20px">{{ user.survey.tour }}</span>
+                        <p><strong>Selected Tour Name</strong></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="count-box">
+                        <i class="icofont-users-alt-5"></i>
+                        <span style="font-size:20px">{{ user.survey.departure }}</span>
+                        <p><strong>Departure Date</strong></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Facts Section -->
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>My Preferred Future Travel Companions</h2>
+            </div>
+
+            <div class="row no-gutters">
+
+                <div class="col-lg-6 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="count-box">
+                        <i class="icofont-airplane-alt"></i>
+                        <span style="font-size:20px">{{ user.survey.futureCompanionDescription }}</span>
+                        <p><strong>Ideal companion description</strong></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="count-box">
+                        <i class="icofont-world"></i>
+                        <span style="font-size:20px">{{ user.survey.gender }}</span>
+                        <p><strong>Gender</strong></p>
+                    </div>
+                </div>
+
+
 
             </div>
 
@@ -206,95 +285,7 @@
         </div>
     </section><!-- End Skills Section -->
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-        <div class="container">
 
-            <div class="section-title">
-                <h2>Resume</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                    fugiat sit in iste officiis commodi quidem hic quas.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6" data-aos="fade-up">
-                    <h3 class="resume-title">Sumary</h3>
-                    <div class="resume-item pb-0">
-                        <h4>Tracy Nguyen</h4>
-                        <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
-                                developing user-centered digital/print marketing material from initial concept to final,
-                                polished deliverable.</em></p>
-                        <ul>
-                            <li>San Diego, CA, U.S.A</li>
-                            <li>(123) 456-7891</li>
-                            <li>tracy@example.com</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="resume-title">Education</h3>
-                    <div class="resume-item">
-                        <h4>Master of Science Information System &amp; Technology</h4>
-                        <h5>2019-2020</h5>
-                        <p><em>Claremont Graduate University</em></p>
-                        <p>Claremont, CA, USA</p>
-                        <p>Major: Data Analysis</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Bachelor of Science &amp; Business Administrative</h4>
-                        <h5>2013 - 2018</h5>
-
-                        <p><em>Cal State San Marcos University</em></p>
-                        <p>San Marcos, CA, USA</p>
-                        <p>Major: International Business and Marketing</p>
-                    </div>
-                </div>
-                <div class="resume-item">
-                    <h4>Study Exachange</h4>
-                    <h5>2016 - 2017</h5>
-
-                    <p><em>HongKong Baptist University</em></p>
-                    <p>HongKong, China</p>
-                    <p>Major: International Business and Marketing</p>
-                </div>
-            </div>
-
-        </div>
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-                <h4>Senior graphic design specialist</h4>
-                <h5>2019 - Present</h5>
-                <p><em>Experion, New York, NY </em></p>
-                <ul>
-                    <li>Lead in the design, development, and implementation of the graphic, layout, and
-                        production communication materials</li>
-                    <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of
-                        the project. </li>
-                    <li>Supervise the assessment of all graphic materials in order to ensure quality and
-                        accuracy of the design</li>
-                    <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000
-                    </li>
-                </ul>
-            </div>
-            <div class="resume-item">
-                <h4>Graphic design specialist</h4>
-                <h5>2017 - 2018</h5>
-                <p><em>Stepping Stone Advertising, New York, NY</em></p>
-                <ul>
-                    <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and
-                        advertisements).</li>
-                    <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                    <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                    <li>Created 4+ design presentations and proposals a month for clients and account managers
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </div>
-
-        </div>
-    </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
@@ -421,18 +412,6 @@
 
         </div>
     </section><!-- End Portfolio Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>What I'm looking for from my travel buddies</h2>
-                <p>Honest, educated, open-minded</p>
-            </div>
-
-        </div>
-    </section><!-- End Services Section -->
 
 
     <!-- ======= Contact Section ======= -->

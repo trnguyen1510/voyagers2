@@ -34,7 +34,7 @@ $ cd Voyagers
 2. Create a virtual environment to install dependencies:
 - For MacOS: 
  ```sh
-$ pip3 -m venv env 
+$ python3 -m venv env 
 `````````````
 
 - For Windows:
@@ -52,7 +52,7 @@ C:\Users\Name\Voyagers> env\Scripts\activate
 `````````````
 4. Install dependencies listed in the requirement.txt:
  ```sh
-(env)$ pip3 install -r requirements.txt 
+(env)$ pip install -r requirements.txt 
 `````````````
 Note the `(env)` in front of the prompt. This indicates that this terminal
 session operates in a virtual environment set up by `py -m venv env`.
@@ -241,7 +241,7 @@ College students, newly graduates, young professionals, unexperienced or experie
 
  - Tracy Nguyen
 
- - Kennenth Carmona
+ - Kenneth Carmona
 
  - Tayo Arikenbi
 
@@ -251,9 +251,10 @@ College students, newly graduates, young professionals, unexperienced or experie
 # Milestone 2.0
 
 1. Tour preferences quiz
-2. Matching companions based on tour preferences 
-3. Tours detail and booked users display 
-4. Other users can review the booked-users' dashboards
+2. Changed SQLite to MongoDB platform
+3. Tours detail for each tour package
+4. Editing and saving user profile and information and append it to user's dashboard
+
 
 
 
