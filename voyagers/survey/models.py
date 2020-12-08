@@ -11,10 +11,11 @@ class Survey(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     country = models.CharField(max_length=100, blank=True, default='')
-    city = models.CharField(blank=True,max_length=100, default='')
-    tour = models.CharField(blank=True,max_length=100, default='')
+    city = models.CharField(blank=True, max_length=100, default='')
+    tour = models.CharField(blank=True, max_length=100, default='')
     departure = models.CharField(blank=True, max_length=100, default='')
     futureCompanionDescription = models.TextField(blank=True, default='')
+    gender = models.CharField(max_length=100, blank=True, default='')
 
     def __str__(self):
         return self.user.username

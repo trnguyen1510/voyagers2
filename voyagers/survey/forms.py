@@ -57,6 +57,12 @@ departureChoices = [
 
 ]
 
+genderChoices = [
+    ("Male", "Male"),
+    ("Female", "Female"),
+    ("Mixed", "Mixed")
+]
+
 
 class surveyForm(forms.ModelForm):
     # class Meta:
@@ -67,4 +73,6 @@ class surveyForm(forms.ModelForm):
     country = forms.CharField(widget=forms.Select(choices="countryChoices"))
     city = forms.CharField(widget=forms.Select(choices="cityChoices"))
     tour = forms.CharField(widget=forms.Select(choices="tourChoices"))
-    departure = forms.CharField(widget=forms.Select(choices="departureChoices"))
+    departure = forms.CharField(
+        widget=forms.Select(choices="departureChoices"))
+    gender = forms.CharField(widget=forms.Select(choices="genderChoices"))

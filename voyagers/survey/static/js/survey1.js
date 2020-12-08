@@ -41,11 +41,13 @@ submitBtn.addEventListener("click", function () {
     progressText[current - 1].classList.add("active");
     current += 1;
     setTimeout(function () {
-        alert("Your Form Successfully Signed up");
-        location.reload();
-    }, 800);
+        alert("Thanks for submit, redirecting to User Dashboard!");
+    }, 100);
 });
 
+function myFunction() {
+    window.open("{% url 'dashboard' %}")
+}
 prevBtnSec.addEventListener("click", function (event) {
     event.preventDefault();
     slidePage.style.marginLeft = "0%";
